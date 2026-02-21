@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Prof. Alex Obeng",
+    "title": "Professor of Sociology",
+    "image": "assets/faculty/prof-alex-obeng.jpg"
+  },
+  {
+    "name": "Prof. Daniel Fiaveh",
+    "title": "Professor of Sociology",
+    "image": "assets/faculty/prof-daniel-fiaveh.jpg"
+  },
+  {
+    "name": "Prof. Eric Koka",
+    "title": "Professor of Sociology",
+    "image": "assets/faculty/prof-eric-koka.jpg"
+  },
+  {
+    "name": "Prof. Georgina",
+    "title": "Professor of Anthropology",
+    "image": "assets/faculty/prof-georgina.jpg"
+  },
+  {
+    "name": "Prof. Henrietta",
+    "title": "Professor of Sociology",
+    "image": "assets/faculty/prof-henrietta.jpg"
+  },
+  {
+    "name": "Prof. William Boateng",
+    "title": "Professor of Sociology",
+    "image": "assets/faculty/prof-william-boateng.jpg"
+  },
+  {
+    "name": "Prof. Windie Ansah",
+    "title": "Professor of Sociology",
+    "image": "assets/faculty/prof-windie-ansah.jpg"
+  },
+  {
+    "name": "Dr. Albert Annang",
+    "title": "Senior Lecturer",
+    "image": "assets/faculty/dr-albert-annang.jpg"
+  },
+  {
+    "name": "Dr. Brempong Osei Tutu",
+    "title": "Senior Lecturer",
+    "image": "assets/faculty/dr-brempong-osei-tutu.jpg"
+  },
+  {
+    "name": "Dr. Daniel Darko Asumadu",
+    "title": "Lecturer",
+    "image": "assets/faculty/dr-daniel-darko-asumadu.jpg"
+  },
+  {
+    "name": "Dr. Edgar Takyi Akonor",
+    "title": "Lecturer",
+    "image": "assets/faculty/dr-edgar-takyi-akonor.jpg"
+  },
+  {
+    "name": "Dr. Emmanuel Asante",
+    "title": "Lecturer",
+    "image": "assets/faculty/dr-emmanuel-asante.jpg"
+  },
+  {
+    "name": "Dr. Francis Anokye",
+    "title": "Lecturer",
+    "image": "assets/faculty/dr-francis-anokye.jpg"
+  },
+  {
+    "name": "Dr. Micheal Sakyi Darko",
+    "title": "Lecturer",
+    "image": "assets/faculty/dr-micheal-sakyi-darko.jpg"
+  },
+  {
+    "name": "Dr. Razak Imoro",
+    "title": "Lecturer",
+    "image": "assets/faculty/dr-razak-imoro.jpg"
+  },
+  {
+    "name": "Dr. Solomon Sika Bright",
+    "title": "Lecturer",
+    "image": "assets/faculty/dr-solomon-sika-bright.jpg"
+  },
+  {
+    "name": "Ms. Dilys Amoabeng",
+    "title": "Lecturer",
+    "image": "assets/faculty/ms-dilys-amoabeng.jpg"
+  }
+]
