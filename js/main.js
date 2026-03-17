@@ -611,21 +611,45 @@ document.addEventListener('keydown', function (e) {
 document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('contactForm');
   if (!form) return;
+  var status = document.getElementById('contactFormStatus');
 
-  form.addEventListener('submit', function (e) {
+  function encodeFormData(data) {
+    return Array.from(data.entries()).map(function (entry) {
+      return encodeURIComponent(entry[0]) + '=' + encodeURIComponent(entry[1]);
+    }).join('&');
+  }
+
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     var btn = form.querySelector('button[type="submit"]');
     var origText = btn.innerHTML;
     btn.innerHTML = 'Sending...';
     btn.disabled = true;
+    if (status) status.textContent = 'Sending your message...';
 
-    setTimeout(function () {
+    try {
+      var response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeFormData(new FormData(form))
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
       btn.innerHTML = origText;
       btn.disabled = false;
       form.reset();
+      if (status) status.textContent = 'Message sent successfully. We\'ll get back to you soon.';
       showToast('Message Sent!', 'Thank you for your message. We\'ll get back to you soon.');
-    }, 1000);
+    } catch (error) {
+      btn.innerHTML = origText;
+      btn.disabled = false;
+      if (status) status.textContent = 'Sorry, your message could not be sent right now. Please try again or email the department directly.';
+      showToast('Message Not Sent', 'Please try again in a moment, or contact the department by email.');
+    }
   });
 });
 

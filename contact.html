@@ -146,7 +146,11 @@
           <!-- Contact Form -->
           <div>
             <h2>Send us a Message</h2>
-            <form id="contactForm" class="contact-form">
+            <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact">
+              <p hidden>
+                <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field"></label>
+              </p>
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Full Name</label>
@@ -165,6 +169,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6" placeholder="Your message..." required></textarea>
               </div>
+              <p id="contactFormStatus" class="text-muted" style="font-size:.9rem;margin-bottom:1rem" aria-live="polite"></p>
               <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
             </form>
           </div>
