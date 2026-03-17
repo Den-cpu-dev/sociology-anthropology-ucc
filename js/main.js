@@ -189,12 +189,52 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/raymond-kwasi-boasinke"
   },
   {
-    id: 19, name: "Ms. Dilys Amoabeng", title: "Principal Research Assistant (Teaching Associate)", position: "Senior Staff",
-    rank: "Senior Staff", email: "dilys.amoabeng@ucc.edu.gh", image: "assets/faculty/ms-dilys-amoabeng.jpg",
+    id: 19, name: "Ms. Dilys Amoabeng", title: "Principal Research Assistant (Teaching Associate)", position: "Teaching Staff",
+    rank: "Lecturer", email: "dilys.amoabeng@ucc.edu.gh", image: "assets/faculty/ms-dilys-amoabeng.jpg",
     bio: "Ms. Dilys Amoabeng is a Principal Research Assistant and Teaching Associate in the Department of Sociology and Anthropology, supporting teaching and research activities.",
     specializations: ["Research Support", "Teaching"],
     interests: ["Social Research", "Student Support"],
     profileUrl: "https://directory.ucc.edu.gh/p/dilys-amoabeng"
+  },
+  {
+    id: 20, name: "Non-Teaching Staff Member 1", title: "Administrative Assistant (Placeholder)", position: "Department Office",
+    rank: "Non-Teaching Staff", email: "placeholder1@ucc.edu.gh", image: "",
+    bio: "Profile details for this non-teaching staff member will be added soon.",
+    specializations: ["To be updated"],
+    interests: ["To be updated"],
+    profileUrl: ""
+  },
+  {
+    id: 21, name: "Non-Teaching Staff Member 2", title: "Accounts/Finance Support (Placeholder)", position: "Department Office",
+    rank: "Non-Teaching Staff", email: "placeholder2@ucc.edu.gh", image: "",
+    bio: "Profile details for this non-teaching staff member will be added soon.",
+    specializations: ["To be updated"],
+    interests: ["To be updated"],
+    profileUrl: ""
+  },
+  {
+    id: 22, name: "Non-Teaching Staff Member 3", title: "Examinations Support Officer (Placeholder)", position: "Department Office",
+    rank: "Non-Teaching Staff", email: "placeholder3@ucc.edu.gh", image: "",
+    bio: "Profile details for this non-teaching staff member will be added soon.",
+    specializations: ["To be updated"],
+    interests: ["To be updated"],
+    profileUrl: ""
+  },
+  {
+    id: 23, name: "Non-Teaching Staff Member 4", title: "Records & Registry Assistant (Placeholder)", position: "Department Office",
+    rank: "Non-Teaching Staff", email: "placeholder4@ucc.edu.gh", image: "",
+    bio: "Profile details for this non-teaching staff member will be added soon.",
+    specializations: ["To be updated"],
+    interests: ["To be updated"],
+    profileUrl: ""
+  },
+  {
+    id: 24, name: "Non-Teaching Staff Member 5", title: "Student Services Assistant (Placeholder)", position: "Department Office",
+    rank: "Non-Teaching Staff", email: "placeholder5@ucc.edu.gh", image: "",
+    bio: "Profile details for this non-teaching staff member will be added soon.",
+    specializations: ["To be updated"],
+    interests: ["To be updated"],
+    profileUrl: ""
   }
 ];
 
@@ -308,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (facultyData.length > showCount) {
     var viewAll = document.createElement('div');
     viewAll.className = 'text-center mt-3';
-    viewAll.innerHTML = '<a href="people.html" class="btn btn-outline" style="border-color:var(--primary);color:var(--primary)">View All ' + facultyData.length + ' Faculty Members &rarr;</a>';
+    viewAll.innerHTML = '<a href="people.html" class="btn btn-outline" style="border-color:var(--primary);color:var(--primary)">View All ' + facultyData.length + ' Faculty &amp; Staff &rarr;</a>';
     preview.parentNode.appendChild(viewAll);
   }
 });
@@ -333,13 +373,16 @@ document.addEventListener('DOMContentLoaded', function () {
     var professors = filtered.filter(function (m) { return m.rank === 'Professor' || m.rank === 'Associate Professor'; });
     var seniorLecturers = filtered.filter(function (m) { return m.rank === 'Senior Lecturer'; });
     var lecturers = filtered.filter(function (m) { return m.rank === 'Lecturer'; });
-    var staff = filtered.filter(function (m) { return m.rank === 'Senior Staff'; });
+    var nonTeachingStaff = filtered.filter(function (m) {
+      return m.rank === 'Senior Staff' || m.rank === 'Research Staff' || m.rank === 'Non-Teaching Staff' ||
+        m.rank === 'Administrative Staff' || m.rank === 'Support Staff';
+    });
 
     var sections = [
       { title: 'Professors', members: professors },
       { title: 'Senior Lecturers', members: seniorLecturers },
       { title: 'Lecturers', members: lecturers },
-      { title: 'Research Staff', members: staff }
+      { title: 'Non-Teaching Staff', members: nonTeachingStaff }
     ];
 
     var hasResults = false;

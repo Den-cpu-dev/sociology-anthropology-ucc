@@ -2505,6 +2505,424 @@ const courseData = {
       "Produce a substantial scholarly work that contributes to the field."
     ],
     readings: []
+  },
+
+  // ==================== DIPLOMA IN SOCIAL BEHAVIOUR AND CONFLICT MANAGEMENT (SANDWICH) ====================
+
+  "SBC011": {
+    name: "Society and Social Change", credits: "3",
+    lecturer: "Mr. Michael Sakyi-Darko",
+    description: "The course explains the concepts and processes of social change. It discusses the evolution of human cultures, behaviours and institutions over time and the factors that has led to these transformations. This course covers topics such as the basic concepts of social change and society, nature of social change, sources of social change, classical and contemporary drivers of social change and development such as colonialism, neo-colonialism, globalization, democratization, urbanisation, migration, financial inclusion, climate change technology and gender dynamics. Other issues include the theoretical underpinnings of social change in societies, effect of social change on development, the general patterns of adaptation to changes at the individual, group and societal level and the conflict dynamics and its management.",
+    objectives: [
+      "Explain concept and processes of social change in Ghana and its impact on conflict and conflict management.",
+      "Discuss the factors of social change in the society.",
+      "Analyse the general pattern of adaptation to change in the society.",
+      "Assess the impact of social change on development."
+    ],
+    readings: [
+      "Ansa-Asamoa, K. (2001). On social change in sub-Saharan Africa; A guide to the study of the process of social transformation. Woeli Publishing Services.",
+      "Asuman, A. A. K. & Adjin-Tettey, T. D (2025). Communication and social change in Africa: Selected case studies. Institute of Network Cultures.",
+      "Elongué, C. Vandyck C. K. (2019). Social movements and social change in Africa. West Africa Civil Society Institute.",
+      "Friedmann, W. (2023). Law in a changing society. University of California Press.",
+      "Nukunya G. K. (2003). Tradition and change: An introduction to sociology (2nd ed.). Ghana Universities Press.",
+      "Sanford, N. (2017). Self and society: Social change and individual development. Routledge."
+    ]
+  },
+
+  "SBC012": {
+    name: "Gender Relations and Conflict", credits: "3",
+    lecturer: "Department Faculty",
+    description: "The course introduces students to a comprehensive understanding of gender relations and how existing gender inequalities are exacerbated, leading to specific conflict and peacebuilding efforts. The course covers topics such as gender concepts and terminologies, masculinity and femininity, patriarchy, element of gender relations, feminist theories, promotion of gender equitable cultures, feminism, the role of women in peacebuilding, opportunities and challenges of conflicts on gender equality, sources of conflict, tools of conflict management.",
+    objectives: [
+      "Discuss basic issues in gender studies and conflict management.",
+      "Explain the sources of conflict.",
+      "Discuss the tools of conflict management.",
+      "Examine how conflict impacts men and women differently."
+    ],
+    readings: [
+      "Adams, T. M., & Fuller, D. B. (2006). The words have changed but the ideology remains the same: Misogynistic lyrics in rap music. Journal of Black Studies, 36(6), 938-957.",
+      "Holmes, M. (2007). What is gender? Sociological approaches. Sage.",
+      "Kimmel, M. (2000). The gendered society. Oxford University Press.",
+      "Thompson, M. (2006). Women, gender, and conflict: making the connections. Development in Practice, 16(3-4), 342-353.",
+      "Wood, U. T. (2008). Gendered lives, communication, gender and culture. Wadsworth Publications."
+    ]
+  },
+
+  "SBC013": {
+    name: "Protection Agencies and Community Relations", credits: "3",
+    lecturer: "Dr. Raymond Kwasi Boasinke",
+    description: "The course introduces the foundational principles of building trust and collaborations between security agencies and the community they serve. The course covers areas such as the interaction between the protection agencies - police, community police, fire service, national disaster management organization, community security strategies, traditional authorities, lower courts - and how that affects the general security of communities and effective management.",
+    objectives: [
+      "Describe the role of the protection agencies.",
+      "Discuss the relationship between protection agencies and communities and how it enhances conflict management."
+    ],
+    readings: [
+      "Boatswain-Kyte, A., Trocmé, N., Esposito, T., & Fast, E. (2022). Child protection agencies collaborating with grass-root community organizations: partnership or tokenism? Journal of Public Child Welfare, 16(3), 349-375.",
+      "Coker-Appiah, D. & Cusack, K. (1999). Violence Against Women and Children in Ghana: Report of a National Study. Ghana: Gender Studies and Documentation Centre.",
+      "Kemshall, H. (2010). Community protection and multi-agency public protection arrangements. In Handbook of public protection (pp. 221-238). Willan.",
+      "McDaniel, S., & Tepperman, L. (2010). Close relations: An introduction to the sociology of families (4th ed.). Canada: Pearson.",
+      "Panova, O. O., Tanko, A. V., Povydysh, V. V., & Alieksieieva, O. V. (2020). Law enforcement agencies in the system of entities of protection and defence of human rights. Amazonia Investiga, 9(30), 77-83.",
+      "Steeves, V., & Pinero, V. B. (2008). Privacy and police power: Situating the reasonable expectation of privacy test. Canadian Journal of Criminology and Criminal Justice, 50(3), 263-269."
+    ]
+  },
+
+  "SBC014": {
+    name: "Personal and Career Development", credits: "3",
+    lecturer: "Dr. Daniel Ampem Darko-Asumadu",
+    description: "The course places emphasis on developing the skills of students to succeed as effective employees regardless of their socio-cultural and demographic differences. The course covers topics such as concepts of personal and career development, development of the self, theories of career planning and development, skills identification in career development, employability skills, impression management, the importance of personal and career development programmes such as character development, short courses, workshops (e.g. resume writing, job hunting), seminars, and networking.",
+    objectives: [
+      "Explain personal and career development.",
+      "Explain theoretical underpinnings of personal and career development.",
+      "Discuss the diverse range of opportunities to build experience and clarity about their goals.",
+      "Empower students to pursue jobs and leadership experiences they find meaningful."
+    ],
+    readings: [
+      "Afrassa, T. M. (2001). Student level factors that influence the employability of TAFE graduates over time: A partial least-square. Office of Vocational Education and Training.",
+      "Beukes, C. J. (2009). The relationship between employability and emotional intelligence. Unpublished research report, Department of Industrial and Organizational Psychology, University of South Africa, Pretoria.",
+      "Brolin, D. E., & Loyd, R. J. (2004). Career development and transition services: A functional life skills approach. Pearson.",
+      "Hirschi, A., & Dauwalder, J. P. (2015). Dynamics in career development: Personal and organizational perspectives. Handbook of life design: From practice to theory and from theory to practice, 27-39.",
+      "Ismail, A., Madrah, H., Aminudin, N., & Ismail, Y. (2013). Mediating role of career development in the relationship between career program and personal outcomes. Hubs-Asia, 10(1), 43-54."
+    ]
+  },
+
+  "SBC015": {
+    name: "Deviance and Social Problems", credits: "3",
+    lecturer: "Dr. Jaha Razak Imoro",
+    description: "This course deals with the concept of deviance, causes, types and the nature and form they occur. It covers topics such as nature of deviance and social control, conflicting definitions of social deviance, theoretical explanation of social deviance, forms of social deviance, social problems and crisis management.",
+    objectives: [
+      "Explain the dynamics of deviance and social problems.",
+      "Analyse similarities and differences in deviant behaviours.",
+      "Examine possible strategies that could be employed in their management."
+    ],
+    readings: [
+      "Akers, R. (1997). Criminological theories: Introduction and education. Los Angeles: Roxbury Publishing Company.",
+      "Giddens, A. (2006). Sociology. Cambridge: Polity Press.",
+      "Ritzer, G. (1986). Social problems (2nd edition). New York: Random House.",
+      "Siegel, L. J. (2008). Criminology: Theories, patterns and typologies. Belmont: Thompson & Wadsworth.",
+      "Thio, A., & Calhoun, T. (2001). Deviant behaviour. Boston: Alan and Bacon.",
+      "Thio, A., & Taylor, J. (2011). Social problems. Jones & Bartlett Publishers."
+    ]
+  },
+
+  "SBC016": {
+    name: "Small Arms and Light Weapons", credits: "3",
+    lecturer: "Dr. Emmanuel Asante",
+    description: "This course exposes students to the problems created by the proliferation of small arms and light weapons. It explores the identification, management and control of firearms and their ammunitions. This course covers specific issues such as definition and categories of small arms and light weapons, impact and consequences of small arms and light weapons, the effects of the illicit manufacture and trade in small arms and light weapons in our communities, control mechanisms/agencies in combating the proliferation of arms, ammunition management and border control.",
+    objectives: [
+      "Explore issues related to the proliferation and misuse of small arms and light weapons in Africa.",
+      "Develop expertise in identifying and tracing weapons and illicit trafficking.",
+      "Discuss the impact of small arms and light weapons.",
+      "Discuss the management and control of firearms and ammunitions."
+    ],
+    readings: [
+      "Abdulai, N. (2003). Introduction to small arms. Foundation for Security and Development in Africa.",
+      "Baronchelli, A., Caruso, R., & Ricciuti, R. (2022). Trade in small arms and light weapons: Are embargoes effective? The World Economy, 45(5), 1336-1361.",
+      "Muggah, R. & Batchelor, P. (2002). Development held hostage: Assessing the effects of small arms on human development. UNDP.",
+      "Prah, M. & Akonor, E. (2007). Illicit arms production in Ghana: Supplementary survey. Foundation for Security and Development in Africa.",
+      "Fowler, W., North, A., & Strong, C. (2008). The history of pistols, revolvers and submachine guns. London: Southwester."
+    ]
+  },
+
+  "SBC017": {
+    name: "Methods of Social Research", credits: "3",
+    lecturer: "Prof. Daniel Yaw Fiaveh",
+    description: "This course focuses on the social science research process as applicable to social behaviour and conflict management. It discusses the concepts and principles of research methodology. Topics include the research paradigm, the scientific method, quantitative and qualitative research methods, techniques of data collection, analysis and interpretation, reliability and validity and sampling, ethics in research. The course also emphasizes the new trajectories in the use of research in solving practical social problems.",
+    objectives: [
+      "Explain the research paradigm.",
+      "Discuss the research methodologies and methods.",
+      "Develop the skills and techniques in managing and analysing data.",
+      "Discuss interpretation of data."
+    ],
+    readings: [
+      "Obeng, A. S. (2013). Guidelines on social research methods. Ghana, Yaci publications.",
+      "Creswell, J. W. & Creswell, J. D. (2018). Research design: Qualitative, quantitative, and mixed methods approach (5th ed.). Sage.",
+      "Creswell, J. W. & Poth, C. N. (2018). Qualitative inquiry and research design: Choosing among five approaches (4th ed.). Sage.",
+      "Kovach, M. (2010). Conversation method in indigenous research. First People's Child and Family Review, 5(1), 40-48.",
+      "Levin, J, Fox, J. A. & Forde, D. R. (2014). Elementary statistics in social research (12th ed.). Pearson.",
+      "Padgett, D. K. (2017). Qualitative methods in social work research (3rd ed.). Sage.",
+      "Patton, M. Q. (2015). Qualitative research and evaluation methods (4th ed.). Sage Publications."
+    ]
+  },
+
+  "SBC018": {
+    name: "Communicative Skills", credits: "2",
+    lecturer: "Prof. Georgina Yaa Oduro",
+    description: "The course is designed to equip students with language skills in the discharge of their professional duties. It enhances students' communicative ability in English. The course covers topics such as academic writing, grammar, reading and comprehension, listening, speaking, note taking, editing and proof reading, digital communication and public speaking.",
+    objectives: [
+      "Enhance effective writing skills.",
+      "Improve speaking and presentation skills.",
+      "Enhance active listening."
+    ],
+    readings: [
+      "Gborsong, P. (2011). Fundamentals of communicative skills for undergraduate students and secretaries. Saarbrucken, Germany: Lambert Academic Publishing GMBH & Co.",
+      "Gogovi, G. A. K., Gborsong, P., Yankah, V. K., & Essel, K. (2000). Communicative skills. Cape Coast: Centre for Continuing Education, University of Cape Coast.",
+      "Opoku-Agyemang, N. J. (1998). A handbook for writing skills. Accra: Ghana Universities Press.",
+      "Sekyi-Baidoo, Y. (2003). Learning and communicating. Accra: Infinity Graphic Ltd.",
+      "Yankson, K. E. (1994). Better English through concord for West African students. Cape Coast: Hampton Press."
+    ]
+  },
+
+  "SBC019": {
+    name: "Basic Computing", credits: "2",
+    lecturer: "Dr. Edgar Takyi Akonor",
+    description: "This course introduces students to the foundational computing knowledge, and how to use computer for data processing and analysis. This course covers relevant topics such as hardware basics, operating systems, the internet, the use of productive software like word, excel and PowerPoint. Also, students are taught the windows, data entry and analysis.",
+    objectives: [
+      "Discuss the fundamentals of computing.",
+      "Expose students to the hardware and software packages of basic computing."
+    ],
+    readings: [
+      "Asante, A. (2012). Essentials of computers for tertiary students. Cape Coast: University of Cape Coast Press.",
+      "Laudon, K. C. & Laudon, J. P. (2000). Management information systems. Upper Saddle River, NJ: Prentice Hall.",
+      "Norton, P. (1999). Introduction to computers. New Delhi: McGraw-Hill.",
+      "Norton, P. (2003). Computing fundamentals. New York: McGraw-Hill.",
+      "Pallant, J. (2001). SPSS survival manual: A step by step guide to data analysis using SPSS for windows. London: Open University Press."
+    ]
+  },
+
+  "SBC020": {
+    name: "Principles of Conflict", credits: "3",
+    lecturer: "Dr. Francis Anning Anokye",
+    description: "This course is designed to introduce students to the concept and analysis of social conflict in the society. The emphasis will be on types and causes of conflict as explained by various theories. This course covers topics such as the concepts of conflict, types of conflict, causes of conflict, the stages of conflict, theories of conflict including biological theories, frustration-aggression theories, human needs theories, relational theories, and structural theories, the functions and dysfunctions of conflicts, effects of conflict and conflict handling styles.",
+    objectives: [
+      "Explain the basic concepts of conflict.",
+      "Explore the nature of social conflict.",
+      "Discuss the relevant theories of conflict.",
+      "Describe the stages of conflict."
+    ],
+    readings: [
+      "Bartos, O. J., & Wehr, P. (2002). Using conflict theory. Cambridge University Press.",
+      "Chijioke, I. F. (2021). Georg Simmel and the Study of Religious Conflicts. Journal of Religion and Human Relations, 13(1), 350-362.",
+      "Coser, L (1956). The functions of social conflict. The Free Press.",
+      "Fisher, S., Ludin, J., Abdi, D. I., Smith, R., Williams, S., & Williams, S. (2000). Working with conflict: Skills and strategies for action. Zed books. New York.",
+      "Kriesberg, L. (1973). The sociology of social conflicts. Prentice-Hall, Inc., Englewood Cliffs."
+    ]
+  },
+
+  "SBC021": {
+    name: "Managing Human Resource", credits: "3",
+    lecturer: "Prof. Alex Somuah Obeng",
+    description: "The course introduces students to the basic concepts and techniques of managing human resources, as well as the elements of managing human resource. It covers issues like definition of concepts, importance of managing human resource, elements of managing human resource, experiential and theoretical aspects of recruiting and selecting employees, training, compensation management, motivating, performance management, discrimination and equal employment opportunity, and managing employee relations.",
+    objectives: [
+      "Define the concept of managing human resource.",
+      "Explain why human resource management is a relevant field of study.",
+      "Discuss the various elements of human resource management.",
+      "Identify and utilize the tools of human resource management to solve issues."
+    ],
+    readings: [
+      "Analoui, F. (2007). Strategic human resource management. Thomson.",
+      "Ancona, D., Kochan, T. A., Scully, M., Van Maanen, J. and Westney, D. E. (2005). Managing the future: Organizational behaviour and processes. Thomson-South Western.",
+      "Armstrong, M. (2006). Strategic human resource management: A guide to action. Kogan Page.",
+      "Armstrong. M. (2003). A handbook of human resource management practice. Kogan Page.",
+      "Bratton, J. & Gold, J. (2007). Human resource management: Theory and practice. Macmillan."
+    ]
+  },
+
+  "SBC022": {
+    name: "Group Dynamics", credits: "3",
+    lecturer: "Dr. Brempong Osei-Tutu",
+    description: "This course explores group dynamics including the social processes by which people interact and behave in a group environment. It covers topics such as nature and types of groups, stages of group formation, development, structure, norms and functioning of social groups, communication patterns in the groups, leadership styles, power and influence, conflict and resolution, social/group processes, decision making and problem solving and impact on group behaviour. Decision-making as an aspect of group dynamics is explored.",
+    objectives: [
+      "Explain group dynamics.",
+      "Describe how group dynamics enhance effective interpersonal relations within the society."
+    ],
+    readings: [
+      "Corey, M. S., Corey, G., & Corey, C. (2018). Groups: Process and practice (10th edition). Boston: Cengage.",
+      "Donelson, F. (2010). Group dynamics. New York: Wadsworth.",
+      "Forsyth, D. R. (2010). Group dynamics (5th edition). Belmont, CA: Wadsworth/Cengage.",
+      "Haynes, N. M. (2012). Group dynamics: Basics and pragmatics for practitioners. Lanham, MD: University Press of America.",
+      "Levi, D. (2017). Group Dynamics for teams (5th edition). Los Angeles: Sage.",
+      "Schneider, S. & Weinberg, H. (Eds.). (2003). The large group re-visited: The herd, primal horde, crowds and masses. London and New York: Jessica Kingsley Publishers."
+    ]
+  },
+
+  "SBC023": {
+    name: "Criminology", credits: "3",
+    lecturer: "Dr. Albert Annang",
+    description: "The course focuses on theories and concepts explaining criminal behaviour. The course covers areas such as the definition of crime, types such as homicide, rape, sexual deviation, corporate crime, crime by state and terrorism from the sociological point of view. In addition, the course identifies and describes the social history associated with crime in our society.",
+    objectives: [
+      "Explore basic sociological concepts in crime.",
+      "Discuss theories that explain criminal behaviour."
+    ],
+    readings: [
+      "Police Service of Ghana. (2003). Crime statistics. Statistics and Information Technology Unit, CID Headquarters.",
+      "Siegel, L. (2010). Criminology: Theories, patterns and typologies. West Publishing.",
+      "Thio, A. (2001). Deviant behaviour (6th ed.). Allyn and Bacon.",
+      "The Constitution of Republic of Ghana, (1992). Ghana Publishing Company.",
+      "Twumasi, R. K. (1982). The criminal code of Ghana. Ghana Publishing Corporation."
+    ]
+  },
+
+  "SBC024": {
+    name: "Computer Analysis of Social Data", credits: "3",
+    lecturer: "Dr. Solomon Sika-Bright",
+    description: "The course provides skills in using computational tools and programming (SPSS) to analyse small and large-scale datasets related to human behaviour and social issues. Topics include computational skills (Statistical Product for Service Solution (SPSS)), social science theory, data handling, critical thinking and ethics, scales of measurement of variables, entering data, preparing and manipulating datasets for analysis, conducting simple descriptive and inferential analysis, interpreting results and writing reports.",
+    objectives: [
+      "Demonstrate the handling of data.",
+      "Analyse data using computer software packages."
+    ],
+    readings: [
+      "Asante, A. (2012). Essentials of computers for tertiary students. University of Cape Coast Press.",
+      "Laudon, K. C. & Laudon, J. P. (2000). Management information systems. NJ: Prentice Hall.",
+      "May, T. (2011). Social research issues, methods and process. Open University Press.",
+      "Pallant, J. (2001). SPSS survival manual: A step by step guide to data analysis using SPSS for windows. Open University Press.",
+      "Sabine, L. & Everitt, B. S. (2004). A handbook of statistical analysis using SPSS. CRC Press Company."
+    ]
+  },
+
+  "SBC025": {
+    name: "Family Violence", credits: "3",
+    lecturer: "Dr. Saibu Mutaru",
+    description: "The course examines the dynamics of violence in relationships, how the law works to protect victims of family violence, their children, women and the elderly. The course covers topics such as the nature of family and dating violence, theoretical perspectives on family violence, feminism and violence, systematic determinants of family violence, violence and mothering, intimate partner violence, child exposure to parental violence, dating violence, coping with family violence by the state, through laws and policies, and protection agencies in Ghana.",
+    objectives: [
+      "Explain conceptual issues about family violence.",
+      "Explain various forms of family violence.",
+      "Critically examine the theoretical underpinnings of family violence from multiple perspectives.",
+      "Explain the impact of family violence to various actors.",
+      "Evaluate current programmes and policies intended to support individuals."
+    ],
+    readings: [
+      "Amoakohene, M. I. (2004). Violence against women in Ghana: A look at women's perceptions and review of policy and social responses. Social Science and Medicine 59, 2373-2385.",
+      "Coalition, W. M. (2004). Women's manifesto of Ghana. Abantu for Development.",
+      "Ghana. (2007). The Domestic Violence Act. Republic of Ghana.",
+      "McKie, L. (2005). Families, violence and social change. McGraw-Hill.",
+      "Nukunya G. K. (2001). Tradition and change: An introduction to sociology. Ghana Universities Press."
+    ]
+  },
+
+  "SBC026": {
+    name: "Report Writing", credits: "3",
+    lecturer: "Dr. Raymond Kwasi Boasinke",
+    description: "This course aims at developing writing skills of students. It reinforces the skills in speaking and writing while developing the habit of conducting research. Topics treated include understanding the brief, compiling the information, organizing materials, reviewing, edit and redrafting, proofreading, report structure, table of content, in-text and out-text references, reporting research findings, collecting and analysing data, ethics in report writing including issues of plagiarism and copyright infringement.",
+    objectives: [
+      "Explain writing reports, memoranda and proposals.",
+      "Develop skills for gathering data for writing reports, memoranda and proposals."
+    ],
+    readings: [
+      "Desmond, E. W. (1987). Communication at work: An introduction and information technology. Pitmans.",
+      "Gartside, L. (1973). English for business studies. Fletcher and Sons Ltd.",
+      "Gborsong, P. A. & Gogovi, G. A. K. (2015). Advanced writing in English. Module for College of Distance Education, University of Cape Coast.",
+      "Sekyi-Baidoo, Y. (2000). Learning and communicating. Wilas Press.",
+      "Yankson, K. E. (1994). Better English through concord for West African students. Hampton Press."
+    ]
+  },
+
+  "SBC027": {
+    name: "Conflict Case Studies", credits: "3",
+    lecturer: "Department Faculty",
+    description: "The course analyses specific conflicts to understand the nuances of conflict, develop empathy and learn effective resolution strategies. The course covers topics such as introduction to conflict analysis, conflict analysis tools I, conflict analysis tools II, conflict cases in Ghana, conflict cases in Africa, global conflict cases, challenges of conflict analytical tools.",
+    objectives: [
+      "Discuss conflict analytical tools.",
+      "Analyse conflicts in different social settings.",
+      "Examine conflict cases in Ghana and across the globe."
+    ],
+    readings: [
+      "Agyemang, E. (2017). Farmer-herder conflict in Africa: An assessment of the causes and effects of the sedentary farmers-Fulani herdsmen conflict. A case study of the Agogo Traditional Area, Ashanti Region of Ghana. Master's Thesis, University of Agder.",
+      "Awedoba, A. K. (2009). An ethnographic study of northern Ghanaian conflicts: Toward sustainable peace. Accra: Sub-Saharan Publishers.",
+      "Best, S. G. (Ed.). (2006). Introduction to peace and conflict studies in West Africa: A Reader. Ibadan: Spectrum Books.",
+      "Herbert, S. (2017). Conflict analysis: Topic guide. University of Birmingham.",
+      "Nnoli, O. (Ed.). (1998). Ethnic conflicts in Africa. Dakar: Cordesria Book Series.",
+      "Wallensteen, P. (2018). Understanding conflict resolution. Sage.",
+      "Whittaker, D. J. (2002). Conflict and reconciliation in the contemporary world. Routledge."
+    ]
+  },
+
+  "SBC028": {
+    name: "Conflict Resolution and Management", credits: "3",
+    lecturer: "Dr. Eric Koka",
+    description: "The course introduces students to basic conflict resolution and management methods that can be used to address conflicts at both micro and macro levels of society. The course covers the nature of conflict, root causes of conflict, types of conflict, tools of conflict resolution such as effective communication, negotiation, active listening, arbitration and mediation. Other topics include psychological aspects of conflict, self-management, strategies to foster harmonious environment. Some case studies in conflict management and resolutions are discussed.",
+    objectives: [
+      "Examine the nature of conflict.",
+      "Effectively prevent, manage and resolve conflict.",
+      "Understand conflict resolution theories and tactics.",
+      "Utilise conflict management and resolution strategies."
+    ],
+    readings: [
+      "Coser, L. (1956). The functions of social conflict. New York: The Free Press.",
+      "Menkhaus, T. (2000). Traditional conflict management in contemporary Somalia. In W. Zartman (Ed.). Traditional cures for modern conflicts. London: Lynne Rienner.",
+      "Mitchell, C. & Michael B. (1996). Handbook of conflict resolution: The analytical problem-solving approach. London and New York: Pinter.",
+      "Moore, C. W. (1996). The mediation process: Practical strategies for resolving conflict (2nd edition). San Francisco, CA: Jossey-Bass Publishers.",
+      "Osaghae, E. (2000). Applying traditional methods to modern conflict: Possibilities and limits. In W. Zartman (Ed.). Traditional cures for modern conflicts. London: Lynne Rienner."
+    ]
+  },
+
+  "SBC029": {
+    name: "Law and Society", credits: "3",
+    lecturer: "Dr. John Windie Ansah",
+    description: "This course focuses on a comprehensive view of the law as a social fact and its application in society. The course covers nature of law, functions and origin of law and legal systems, sources of law, role of the courts, structure of the Ghanaian legal system, socio-cultural dimensions of law, and theoretical schools of law. The course covers issues like the processes in enacting bills into law under Ghana's Fourth Republican Constitution and relevance to the Ghanaian society, contemporary issues and the role of law in promoting social justice and order in the society.",
+    objectives: [
+      "Explain the nature and functions of law in society.",
+      "Discuss the theoretical schools of law.",
+      "Review the processes in enacting laws in Ghana."
+    ],
+    readings: [
+      "Bluwey, G. K. (2000). Political Science: An introduction. Yemens Press.",
+      "Hauss, C. (2000). Comparative politics: Domestic responses to global challenges. Wadsworth.",
+      "Wards, L. (1998). An introduction to critical legal theory. Gavendish Publishing.",
+      "The 1992 Fourth Republican Constitution of Ghana.",
+      "UN General Assembly (1948). Universal Declaration of Human Rights."
+    ]
+  },
+
+  "SBC030": {
+    name: "State and Society in Africa", credits: "3",
+    lecturer: "Dr. Brempong Osei-Tutu",
+    description: "This course examines the dynamics and the course of the state formation in Africa from the precolonial, colonial to the present day. The course covers topics such as the historical origin and evolution of African states, society and civil society organisations in politics and development, the effects of ethnic multiplicity political party systems and traditionalism in these states, African governments and law and order, globalization in present day Africa, conflict and peace in Africa, democratization and governance, regionalism and global politics.",
+    objectives: [
+      "Understand the foundations of African states.",
+      "Discuss the effects of ethnic multiplicity.",
+      "Discuss issues of law and order and globalization in present day Africa."
+    ],
+    readings: [
+      "Agyeman, D. K. (2005). The ethnic factor in national development: Uses and abuses. (Available at the Department of Sociology and Anthropology Library, University of Cape Coast).",
+      "Calvocoressi, P. (1985). Independent Africa and the world. New York: Longman.",
+      "Giddens, A. (1989). Sociology. Cambridge: Polity Press.",
+      "Nnoli, O. (Ed.). (1998). Ethnic conflicts in Africa. Dakar: CODESRIA Book Series.",
+      "Rodney, W. (1974). How Europe under-developed Africa. Washington: Howard University Press.",
+      "Rothchild, D. & Olarunsola, A. V. (Eds.). (1983). State versus ethnic claims: African policy dilemmas. Colorado: Westview Press."
+    ]
+  },
+
+  "SBC031": {
+    name: "Migration and National Security", credits: "3",
+    lecturer: "Department Faculty",
+    description: "The course covers a complex relationship between population movements and state security, exploring how migration influences national security, state capacity and the balance of power. The course covers the concepts of migration and national security, forms of migration, factors influencing migration, border management, international laws and policies on migration, the relationship between migration and national security, human security and rights of migrants.",
+    objectives: [
+      "Analyze trends of national and international migration.",
+      "Assess the prospects and challenges of migration.",
+      "Examine the nexus between migration and security.",
+      "Analyze policies and laws on migration."
+    ],
+    readings: [
+      "Dzansi, A. S. (2018). Migration Management in Ghana (Doctoral dissertation, University of Ghana).",
+      "Gryshova, I., Kofman, B., & Petrenko, O. (2019). Migration cultures and their outcomes for national security. Journal of Security & Sustainability Issues, 8(3), 521-530.",
+      "Guild, E. (2013). Security and Migration in the 21st Century. John Wiley & Sons.",
+      "Imoro, R. J., Bukari, K. N., & Ametefe, R. (2023). Experiences, expectations and challenges of return: liberian refugees in Ghana. Exile/Flight/Persecution, 10, 161.",
+      "Metelev, S. E. (2016). Migration as a threat to national security. Indian Journal of Science and Technology, 9(14), 1-6.",
+      "Opon, D. (2021). The impact of migration governance on national security in Africa: A Case of Kenya (Doctoral dissertation, University of Nairobi)."
+    ]
+  },
+
+  "SBC099": {
+    name: "Term Paper", credits: "3",
+    lecturer: "Dr. Albert Annang",
+    description: "This course discusses chapters of academic term paper. It examines the introductory part of the study, the review of related literature and the research method, data interpretation, discussion, summary, conclusions and recommendations. The course covers the development of the research background, writing the research problem, developing the research objectives/questions/hypotheses, reviewing relevant literature and designing the research methods, analysing data collected from the field, interpreting and discussing the research findings, writing the summary of findings, conclusions and recommendations and presenting the research report.",
+    objectives: [
+      "Examine the problem identification.",
+      "Discuss relevant concepts underpinning the selected topic.",
+      "Review related literature.",
+      "Discuss the research methods for the study.",
+      "Interpret data from the field.",
+      "Discuss the research findings.",
+      "Construct summary, conclusions and recommendations."
+    ],
+    readings: [
+      "Creswell, J. W. & Creswell, J. D. (2018). Research design: Qualitative, quantitative, and mixed methods approach (5th ed.). Sage.",
+      "Creswell, J. W. & Poth, C. N. (2018). Qualitative inquiry and research design: Choosing among five approaches (4th ed.). Sage.",
+      "Derntl, M. (2014). Basics of research paper writing and publishing. International Journal of Technology Enhanced Learning, 6(2), 105-123.",
+      "Malhotra, N. K., & Agarwal, J. (2020). Customer relationship marketing. World Scientific Publishing Company.",
+      "Singh, M. K. M. (2019). International graduate students' academic writing practices in Malaysia: Challenges and solutions. Journal of International Students, 5(1), 12-22.",
+      "Zanders, E. D., Zanders, E., & MacLeod, L. (2018). Presentation skills for scientists: A practical guide. Cambridge University Press."
+    ]
   }
 
 };

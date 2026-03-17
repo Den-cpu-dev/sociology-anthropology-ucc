@@ -391,6 +391,12 @@ blockquote{font-style:italic;font-size:1.1rem;opacity:.9;line-height:1.7;max-wid
 .course-item::after{content:'\203A';font-size:1.2rem;color:var(--muted-fg);transition:color .2s ease,transform .2s ease;flex-shrink:0}
 .course-item:hover::after{color:var(--primary);transform:translateX(2px)}
 .course-item .code{font-family:Consolas,monospace;color:var(--primary);font-weight:600;margin-right:.75rem}
+/* Table-row course items (Diploma Sandwich) – keep table layout, add click affordance */
+tr.course-item{display:table-row;padding:0;border:none;border-radius:0;font-weight:normal;gap:0}
+tr.course-item::after{content:none}
+tr.course-item:hover{background:none;border-color:inherit;box-shadow:none;transform:none}
+tr.course-item:hover td{background:rgba(61,90,30,.06);color:var(--primary);cursor:pointer}
+tr.course-item:active{transform:none}
 .electives-heading{font-size:.85rem;font-weight:700;color:var(--muted-fg);text-transform:uppercase;letter-spacing:.05em;margin:1.25rem 0 .5rem;padding-top:.75rem;border-top:1px dashed var(--border)}
 
 /* ===================== SEARCH INPUT ===================== */
