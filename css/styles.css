@@ -75,13 +75,13 @@ header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px 
 @media(max-width:640px){.navbar-brand-text{display:none}.top-bar .campus-label,.top-bar-divider,.top-bar .phone-link{display:none}}
 
 /* ===================== HERO ===================== */
-.hero{position:relative;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--primary-dark)}
+.hero{position:relative;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--primary-dark);background:linear-gradient(45deg,#1a3a0f,#2d5a1f,#1f4a3a,#2d5a1f);background-size:400% 400%;animation:gradientShift 12s ease infinite}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 8s ease;transform:scale(1.02)}
 body.loaded .hero-bg{transform:scale(1)}
 .hero-overlay{position:absolute;inset:0;background:var(--hero-overlay)}
 .hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:3rem 1.5rem;max-width:800px}
-.hero-content .emblem{width:100px;height:100px;margin:0 auto 1.5rem;border-radius:50%;object-fit:cover;padding:10px;background:rgba(255,255,255,.15);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.25);box-shadow:0 8px 32px rgba(0,0,0,.25),0 0 40px rgba(255,255,255,.08);animation:floatEmblem 3s ease-in-out infinite}
-@keyframes floatEmblem{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-content .emblem{width:100px;height:100px;margin:0 auto 1.5rem;border-radius:50%;object-fit:cover;padding:10px;background:rgba(255,255,255,.15);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.25);box-shadow:0 8px 32px rgba(0,0,0,.25),0 0 40px rgba(255,255,255,.08);animation:floatAndPulse 4s ease-in-out infinite}
+@keyframes floatAndPulse{0%,100%{transform:translateY(0) scale(1);filter:drop-shadow(0 8px 32px rgba(0,0,0,.25)) drop-shadow(0 0 20px rgba(232,168,48,.1))}50%{transform:translateY(-10px) scale(1.02);filter:drop-shadow(0 8px 32px rgba(0,0,0,.25)) drop-shadow(0 0 40px rgba(232,168,48,.25))}}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .hero-content h1{font-size:2.5rem;font-weight:800;color:#fff;margin-bottom:.5rem}
 .hero-content .subtitle{font-size:1.2rem;opacity:.9;margin-bottom:.25rem}
 .hero-content .desc{font-size:1rem;opacity:.8;max-width:600px;margin:0 auto 2rem}
@@ -170,6 +170,41 @@ body.loaded .hero-bg{transform:scale(1)}
 .section-gold h2{color:var(--gold-fg)}
 .section-gold p{color:rgba(58,42,8,.8)}
 
+/* ===================== ADMISSIONS STRIP ===================== */
+.admissions-strip{background:linear-gradient(90deg,var(--primary-dark) 0%,var(--primary) 50%,#1f4a3a 100%);color:var(--primary-fg);padding:1.4rem 0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.admissions-strip-inner{display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.admissions-strip h2{color:#fff;font-size:1.35rem;margin-bottom:.25rem}
+.admissions-strip p{color:rgba(255,255,255,.88);max-width:720px}
+.admissions-strip .btn-group{justify-content:flex-start}
+.admissions-strip .btn-outline{color:#fff;border-color:rgba(255,255,255,.65)}
+.admissions-strip .btn-outline:hover{background:rgba(255,255,255,.12)}
+@media(min-width:992px){.admissions-strip-inner{flex-direction:row;align-items:center;justify-content:space-between}}
+
+/* ===================== HOMEPAGE QUICK SEARCH ===================== */
+.homepage-search-wrap{max-width:760px}
+.quick-item{display:block;color:inherit}
+.quick-item .card-body{height:100%}
+.quick-item:hover{color:inherit}
+
+/* ===================== TABLE WRAP / COMPARISON ===================== */
+.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}
+.comparison-table{min-width:860px}
+.comparison-table td,.comparison-table th{padding:.85rem .75rem;vertical-align:top}
+.comparison-table tbody tr:hover td{background:rgba(61,90,30,.05)}
+
+/* ===================== RESEARCH HIGHLIGHTS ===================== */
+.research-card{height:100%}
+.research-card .card-body{display:flex;flex-direction:column;gap:.6rem}
+.section-dark .research-card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18)}
+.section-dark .research-card h3{color:#fff}
+.section-dark .research-card p{color:rgba(255,255,255,.85)}
+
+/* ===================== TESTIMONIALS ===================== */
+.testimonials-grid{align-items:stretch}
+.testimonial-card{margin:0;padding:1.5rem;border:1px solid var(--border);border-radius:calc(var(--radius) * 1.5);background:var(--card);font-size:1rem;line-height:1.8;display:flex;flex-direction:column;justify-content:space-between;gap:1rem;box-shadow:var(--shadow-sm)}
+.testimonial-card p{font-style:italic;color:var(--muted-fg)}
+.testimonial-card footer{font-size:.88rem;font-style:normal;color:var(--primary);font-weight:600}
+
 /* ===================== FACULTY ===================== */
 .faculty-card{cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--card)}
 .faculty-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(0,0,0,.12)}
@@ -182,6 +217,14 @@ body.loaded .hero-bg{transform:scale(1)}
 .faculty-card .faculty-info p{font-size:.68rem;color:var(--muted-fg);margin-top:.15rem}
 .faculty-card .faculty-info .position{font-size:.68rem;color:var(--primary);margin-top:.1rem}
 .faculty-section-title{font-size:1.5rem;font-weight:700;border-bottom:2px solid var(--border);padding-bottom:.5rem;margin-bottom:1.5rem}
+
+/* ===================== STAT CARDS ===================== */
+.stat-card{text-align:center;padding:1.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);transition:all .3s cubic-bezier(.22,1,.36,1)}
+.stat-card:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.stat-number{font-size:2.5rem;font-weight:800;color:var(--gold);line-height:1;display:block;margin-bottom:.5rem}
+.stat-label{font-size:.95rem;color:rgba(255,255,255,.85);font-weight:500}
+@media(min-width:640px){.stat-number{font-size:2.8rem}}
+@media(min-width:768px){.stat-number{font-size:3.2rem}}
 
 /* ===================== MATERIAL CARDS ===================== */
 .material-card{text-align:center;padding:2rem;border:1px solid var(--border);border-radius:calc(var(--radius) * 1.5);background:var(--card);transition:all .3s cubic-bezier(.22,1,.36,1);text-decoration:none;display:block;color:var(--fg)}
@@ -327,9 +370,27 @@ blockquote{font-style:italic;font-size:1.1rem;opacity:.9;line-height:1.7;max-wid
 .hero-content > *:nth-child(5){animation-delay:.5s}
 .hero-content > .btn-group{animation-delay:.55s}
 
+/* Typewriter effect (cursor blink only - typing handled by JavaScript) */
+@keyframes blink{0%,49%{border-right-color:rgba(255,255,255,.75)}50%,100%{border-right-color:transparent}}
+.typewriter-text{font-weight:500;display:inline-block}
+.typewriter-text.typing{border-right:3px solid rgba(255,255,255,.75);animation:blink .75s step-end infinite}
+
+/* Ken Burns effect (slow zoom) */
+@keyframes kenBurns{0%{transform:scale(1.0)}100%{transform:scale(1.04);opacity:1}}
+.hero-bg.ken-burns{animation:kenBurns 6s ease-out forwards}
+
+/* Stats counter animation */
+@keyframes countUp{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)}}
+.stats-section{animation:countUp .8s ease forwards}
+.stat-number{font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:.95rem;color:var(--muted-fg);margin-top:.25rem}
+
 /* Image loading shimmer */
 @keyframes shimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}
 .img-loading{background:linear-gradient(90deg,var(--muted) 25%,rgba(61,90,30,.06) 50%,var(--muted) 75%);background-size:800px 100%;animation:shimmer 1.5s infinite linear}
+
+/* Parallax offset for scroll effect */
+.parallax-bg{will-change:transform;backface-visibility:hidden}
 
 /* ===================== UTILITIES ===================== */
 .mt-1{margin-top:.5rem}.mt-2{margin-top:1rem}.mt-3{margin-top:1.5rem}.mt-4{margin-top:2rem}

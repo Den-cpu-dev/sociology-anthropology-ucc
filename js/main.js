@@ -160,7 +160,7 @@ const facultyData = [
     id: 15, name: "Dr. Albert Annang", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "albert.annang@ucc.edu.gh", image: "assets/faculty/dr-albert-annang.jpg",
     bio: "Dr. Albert Annang is a Lecturer in the Department of Sociology and Anthropology, contributing to research and teaching in sociological studies.",
-    specializations: ["Sociology", "Social Analysis"],
+    specializations: ["Sociology", "Social Analysis", "Criminology"],
     interests: ["Social Research", "Social Problems"],
     profileUrl: "https://directory.ucc.edu.gh/p/albert-annang"
   },
@@ -197,24 +197,24 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/dilys-amoabeng"
   },
   {
-    id: 20, name: "Non-Teaching Staff Member 1", title: "Administrative Assistant (Placeholder)", position: "Department Office",
-    rank: "Non-Teaching Staff", email: "placeholder1@ucc.edu.gh", image: "",
+    id: 20, name: "Mrs. Rebecca Paintsil Quarm", title: "Chief Administrative Assistant", position: "Department General Office",
+    rank: "Non-Teaching Staff", email: "rebecca.quarm@ucc.edu.gh", image: "",
     bio: "Profile details for this non-teaching staff member will be added soon.",
     specializations: ["To be updated"],
     interests: ["To be updated"],
     profileUrl: ""
   },
   {
-    id: 21, name: "Non-Teaching Staff Member 2", title: "Accounts/Finance Support (Placeholder)", position: "Department Office",
-    rank: "Non-Teaching Staff", email: "placeholder2@ucc.edu.gh", image: "",
+    id: 21, name: "Ms. Beatrice Mensah", title: "Principal Administrative Assistant", position: "Department General Office",
+    rank: "Non-Teaching Staff", email: "beatrice.mensah@ucc.edu.gh", image: "",
     bio: "Profile details for this non-teaching staff member will be added soon.",
     specializations: ["To be updated"],
     interests: ["To be updated"],
     profileUrl: ""
   },
   {
-    id: 22, name: "Non-Teaching Staff Member 3", title: "Examinations Support Officer (Placeholder)", position: "Department Office",
-    rank: "Non-Teaching Staff", email: "placeholder3@ucc.edu.gh", image: "",
+    id: 22, name: "Mr. Godfred Owusu Fordjour", title: "Head Messenger", position: "Department General Office",
+    rank: "Non-Teaching Staff", email: "godfred.owusu.fordjour@ucc.edu.gh", image: "",
     bio: "Profile details for this non-teaching staff member will be added soon.",
     specializations: ["To be updated"],
     interests: ["To be updated"],
@@ -710,4 +710,125 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.exec-card img, .hero-bg').forEach(function(img) {
     if (img.tagName === 'IMG') onImgLoad(img);
   });
+  // ==================== KEN BURNS SLIDESHOW ====================
+  var campusImages = ['assets/campus-1.jpg', 'assets/campus-2.jpg', 'assets/campus-3.jpg', 'assets/campus-4.jpg', 'assets/campus-5.jpg', 'assets/campus-6.jpg'];
+  var currentImageIndex = 0;
+  var heroBg = document.querySelector('.hero-bg');
+  
+  if (heroBg && campusImages.length > 0) {
+    function rotateHeroImage() {
+      // Remove previous ken-burns animation
+      heroBg.classList.remove('ken-burns');
+      // Trigger reflow to restart animation
+      void heroBg.offsetWidth;
+      // Set new background image
+      heroBg.style.backgroundImage = 'url(' + campusImages[currentImageIndex] + ')';
+      // Add ken-burns animation
+      heroBg.classList.add('ken-burns');
+      // Move to next image
+      currentImageIndex = (currentImageIndex + 1) % campusImages.length;
+      // Rotate every 6.5 seconds (6s animation + 0.5s pause)
+      setTimeout(rotateHeroImage, 6500);
+    }
+    // Start the slideshow after a short delay
+    setTimeout(rotateHeroImage, 500);
+  }
+
+  // ==================== TYPEWRITER EFFECT ====================
+  var descElement = document.querySelector('.hero-content .desc');
+  if (descElement) {
+    var fullText = descElement.textContent;
+    var charIndex = 0;
+    var isTyping = false;
+    
+    // Only start typewriter once body is loaded
+    setTimeout(function() {
+      descElement.textContent = '';
+      descElement.classList.add('typewriter-text', 'typing');
+      isTyping = true;
+      
+      function typeChar() {
+        if (charIndex < fullText.length && isTyping) {
+          descElement.textContent += fullText[charIndex];
+          charIndex++;
+          // Variable speed: 50-80ms per character for natural feel
+          var delay = 50 + Math.random() * 30;
+          setTimeout(typeChar, delay);
+        } else if (charIndex >= fullText.length) {
+          // Typing complete - remove cursor
+          descElement.classList.remove('typing');
+        }
+      }
+      typeChar();
+    }, 900); // Start after hero entrance animations complete
+  }
+
+  // ==================== PARALLAX SCROLL EFFECT ====================
+  var heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroBg.classList.add('parallax-bg');
+    window.addEventListener('scroll', function() {
+      var scrollPos = window.scrollY;
+      var parallaxOffset = scrollPos * 0.15; // 15% of scroll distance
+      heroBg.style.transform = 'scale(1) translateY(' + parallaxOffset + 'px)';
+    });
+  }
+
+  // ==================== ANIMATED STATS COUNTER ====================
+  var statsSection = document.querySelector('.stats-section');
+  var statsAnimated = false;
+  
+  if (statsSection) {
+    var statsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          document.querySelectorAll('.stat-number').forEach(function(statEl) {
+            var target = parseInt(statEl.getAttribute('data-target'));
+            var duration = 2000; // 2 seconds
+            var increment = target / (duration / 50);
+            var current = 0;
+            
+            var counter = setInterval(function() {
+              current += increment;
+              if (current >= target) {
+                statEl.textContent = target + '+';
+                clearInterval(counter);
+              } else {
+                statEl.textContent = Math.floor(current);
+              }
+            }, 50);
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    statsObserver.observe(statsSection);
+  }
+
+  // ==================== HOMEPAGE QUICK SEARCH ====================
+  var homeQuickSearch = document.getElementById('homeQuickSearch');
+  var homeQuickGrid = document.getElementById('homeQuickGrid');
+  var homeQuickNoResults = document.getElementById('homeQuickNoResults');
+
+  if (homeQuickSearch && homeQuickGrid) {
+    var quickItems = Array.from(homeQuickGrid.querySelectorAll('.quick-item'));
+    homeQuickSearch.addEventListener('input', function() {
+      var q = (homeQuickSearch.value || '').trim().toLowerCase();
+      var visible = 0;
+
+      quickItems.forEach(function(item) {
+        var text = (item.textContent || '').toLowerCase();
+        var tags = (item.getAttribute('data-keywords') || '').toLowerCase();
+        var show = !q || text.includes(q) || tags.includes(q);
+        item.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      if (homeQuickNoResults) {
+        homeQuickNoResults.style.display = visible ? 'none' : 'block';
+      }
+    });
+  }
 });

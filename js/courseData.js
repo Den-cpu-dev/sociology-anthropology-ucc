@@ -574,7 +574,7 @@ const courseData = {
 
   "SOC336": {
     name: "Juvenile Delinquency", credits: "3",
-    lecturer: "Dr. Albert Annang",
+    lecturer: "Dr. Albert Annang/Dr. Edgar Takyi Akonor",
     description: "The course considers the concept of juvenile delinquency from various perspectives \u2014 psychological and sociological. It focuses on the role of family, the school, and the peer group in promoting delinquency. Students are provided with the tools to analyse and evaluate juvenile justice policies and programs.",
     objectives: [
       "Define juvenile delinquency from a legal and sociological perspective.",
