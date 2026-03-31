@@ -47,9 +47,43 @@ const facultyData = [
   {
     id: 1, name: "Prof. Georgina Yaa Oduro", title: "Associate Professor", position: "Head of Department",
     rank: "Professor", email: "gyoduro@ucc.edu.gh", image: "assets/faculty/prof-georgina.jpg",
-    bio: "Prof. Georgina Yaa Oduro is an Associate Professor and the current Head of the Department of Sociology and Anthropology, University of Cape Coast, Ghana. She is the immediate past Director (2019-2023) of the Centre for Gender Research, Advocacy and Documentation (CEGRAD) of the same university.",
-    specializations: ["Adolescence and the Youth", "Gender and the Blue Economy"],
-    interests: ["Gender Issues", "Race and Ethnicity", "Sexuality", "Tangible and Intangible Heritage in Ocean Governance", "Youth and Popular Cultures"],
+    bio: "Prof. Georgina Yaa Oduro is an Associate Professor and the current Head of the Department of Sociology and Anthropology, University of Cape Coast, Ghana. She is the immediate past Director (2019-2023) of the Centre for Gender Research, Advocacy and Documentation (CEGRAD) of the same university. She also served as Hall Warden of Oguaa Hall in 2024, where she was responsible for the welfare of over 1,300 students. She earned a first degree in Sociology with Political Science from the University of Ghana, Legon, a master's degree from the University of Westminster, London, and a PhD from the University of Cambridge, UK. Her doctoral research focused on gender relations, sexuality, and HIV/AIDS education from a youth culture perspective. Her work spans gender issues, violence, sexuality, youth cultures, marginalized populations, popular culture, race and ethnicity, and tangible and intangible cultural heritage in ocean governance and the blue economy. She has expertise in qualitative research methodologies and has received multiple awards and fellowships, including the Takemi Fellowship in International Health (2016-2017) at Harvard T.H. Chan School of Public Health, the Martha Farrell Fellowship (2020/2021), and the MASHAV Fellowship (2023). She has contributed to major handbooks published by Palgrave and Routledge, served as CEGRAD's Coordinator for Advocacy and Outreach (2018-2019), and led or co-led local and international research projects including CODESRIA's MRI project, One Ocean Hub, and multi-country studies on gender, creative industries, and women in trans-national trade. She teaches undergraduate and graduate Sociology courses, supervises and examines master's and PhD theses, serves on several boards and committees, and is on the Editorial Board of the Journal of Gender Based Violence (University of Bristol, UK).",
+    specializations: ["Gender Studies", "Youth Cultures", "Qualitative Research Methodologies", "Blue Economy and Ocean Governance", "Race and Ethnicity"],
+    interests: ["Gender Issues", "Violence", "Sexuality", "Youth and Popular Cultures", "Marginalized Populations", "Tangible and Intangible Heritage", "International Collaborative Research"],
+    background: [
+      "Current Head, Department of Sociology and Anthropology, University of Cape Coast (UCC), Ghana.",
+      "Immediate past Director (2019-2023), Centre for Gender Research, Advocacy and Documentation (CEGRAD), UCC.",
+      "Served as Hall Warden of Oguaa Hall (2024), overseeing welfare support for over 1,300 students."
+    ],
+    education: [
+      "BA (Sociology with Political Science), University of Ghana, Legon.",
+      "Master's Degree, University of Westminster, London.",
+      "PhD, University of Cambridge, UK (focus: gender relations, sexuality, and HIV/AIDS education from a youth culture perspective)."
+    ],
+    fellowshipsAwards: [
+      "Takemi Fellowship in International Health (2016-2017), Harvard T.H. Chan School of Public Health, Harvard University (research on child prostitution in Ghana).",
+      "Martha Farrell Fellowship (2020/2021) in Gender Equality and Anti-Sexual Harassment Initiatives, Association of Commonwealth Universities (ACU), London.",
+      "MASHAV Fellowship (2023), administered by Israel Foreign Affairs."
+    ],
+    selectedPublications: [
+      "Palgrave Handbook of Blue Heritage (2022).",
+      "Palgrave Handbook for Sexuality Education (2017).",
+      "Routledge International Handbook for Sex Industry Research (2019).",
+      "Routledge Handbook for Queer African Studies (2020)."
+    ],
+    projects: [
+      "Lead/Principal Investigator on local and international research projects, including CODESRIA's Meaning Making Research (MRI-2019/2020) on lived experiences of mixed-race individuals in Ghana and Canada.",
+      "Co-investigator (Ghana team), UKRI/GCRF-funded One Ocean Hub (OOH) multi-country research project; leads Ghana's Research Package 5 on critical perspectives of the blue economy.",
+      "Country Lead (2024-2026), multi-country project on Gender and the Creative Industry in African countries, funded by Mastercard Foundation and coordinated by ICRW.",
+      "Co-researcher (2024-2026) on experiences of women in trans-national trade with collaborators from Laval University and the University of Yaounde."
+    ],
+    leadershipService: [
+      "Coordinator for Advocacy and Outreach, CEGRAD (2018-2019).",
+      "Teaches undergraduate and graduate Sociology courses.",
+      "Supervises and examines master's and PhD theses locally and internationally.",
+      "Serves on several boards and committees within and outside UCC.",
+      "Editorial Board member, Journal of Gender Based Violence (University of Bristol, UK)."
+    ],
     profileUrl: "https://directory.ucc.edu.gh/p/georgina-yaa-oduro"
   },
   {
@@ -199,41 +233,25 @@ const facultyData = [
   {
     id: 20, name: "Mrs. Rebecca Paintsil Quarm", title: "Chief Administrative Assistant", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "rebecca.quarm@ucc.edu.gh", image: "",
-    bio: "Profile details for this non-teaching staff member will be added soon.",
-    specializations: ["To be updated"],
-    interests: ["To be updated"],
+    bio: "Mrs. Rebecca Paintsil Quarm is the Chief Administrative Assistant at the Department General Office. She supports day-to-day administrative coordination, documentation workflows, and communication across teaching, research, and student services.",
+    specializations: ["Administrative Coordination", "Records Management", "Department Operations"],
+    interests: ["Service Delivery", "Workflow Improvement", "Student and Staff Support"],
     profileUrl: ""
   },
   {
     id: 21, name: "Ms. Beatrice Mensah", title: "Principal Administrative Assistant", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "beatrice.mensah@ucc.edu.gh", image: "",
-    bio: "Profile details for this non-teaching staff member will be added soon.",
-    specializations: ["To be updated"],
-    interests: ["To be updated"],
+    bio: "Ms. Beatrice Mensah is the Principal Administrative Assistant in the Department General Office. She provides frontline administrative support, helps coordinate internal correspondence, and assists with student-facing office processes.",
+    specializations: ["Office Administration", "Student Services Support", "Correspondence Management"],
+    interests: ["Efficient Administration", "Process Organization", "Stakeholder Communication"],
     profileUrl: ""
   },
   {
     id: 22, name: "Mr. Godfred Owusu Fordjour", title: "Head Messenger", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "godfred.owusu.fordjour@ucc.edu.gh", image: "",
-    bio: "Profile details for this non-teaching staff member will be added soon.",
-    specializations: ["To be updated"],
-    interests: ["To be updated"],
-    profileUrl: ""
-  },
-  {
-    id: 23, name: "Non-Teaching Staff Member 4", title: "Records & Registry Assistant (Placeholder)", position: "Department Office",
-    rank: "Non-Teaching Staff", email: "placeholder4@ucc.edu.gh", image: "",
-    bio: "Profile details for this non-teaching staff member will be added soon.",
-    specializations: ["To be updated"],
-    interests: ["To be updated"],
-    profileUrl: ""
-  },
-  {
-    id: 24, name: "Non-Teaching Staff Member 5", title: "Student Services Assistant (Placeholder)", position: "Department Office",
-    rank: "Non-Teaching Staff", email: "placeholder5@ucc.edu.gh", image: "",
-    bio: "Profile details for this non-teaching staff member will be added soon.",
-    specializations: ["To be updated"],
-    interests: ["To be updated"],
+    bio: "Mr. Godfred Owusu Fordjour serves as Head Messenger for the Department General Office. He supports internal logistics, document circulation, and timely delivery of official departmental communications.",
+    specializations: ["Internal Logistics", "Document Circulation", "Office Support Services"],
+    interests: ["Operational Reliability", "Service Support", "Team Collaboration"],
     profileUrl: ""
   }
 ];
@@ -402,7 +420,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var card = document.createElement('div');
         card.className = 'faculty-card reveal';
         card.style.transitionDelay = (idx * 0.04) + 's';
-        card.onclick = function () { openFacultyModal(member.id); };
+        card.onclick = function () { window.location.href = 'faculty-profile.html?id=' + member.id; };
 
         var imgContainer = document.createElement('div');
         imgContainer.className = 'faculty-card-img';
@@ -424,7 +442,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var overlay = document.createElement('div');
         overlay.className = 'faculty-card-overlay';
-        overlay.innerHTML = '<span>Click for details</span>';
+        overlay.innerHTML = '<span>View profile</span>';
         imgContainer.appendChild(overlay);
 
         var info = document.createElement('div');
@@ -458,6 +476,150 @@ document.addEventListener('DOMContentLoaded', function () {
         renderFaculty(searchInput.value);
         initScrollReveal();
       }, 150);
+    });
+  }
+});
+
+// ==================== FACULTY PROFILE PAGE (faculty-profile.html) ====================
+document.addEventListener('DOMContentLoaded', function () {
+  var profileRoot = document.getElementById('facultyProfileContent');
+  if (!profileRoot) return;
+
+  var params = new URLSearchParams(window.location.search);
+  var id = parseInt(params.get('id'), 10);
+  var member = facultyData.find(function (m) { return m.id === id; });
+
+  if (!member) {
+    profileRoot.innerHTML =
+      '<div class="card" style="padding:2rem;text-align:center">' +
+      '<h2 class="heading-primary">Profile not found</h2>' +
+      '<p class="text-muted" style="margin-bottom:1rem">The selected faculty profile could not be located.</p>' +
+      '<a href="people.html" class="btn btn-secondary">Back to Faculty Directory</a>' +
+      '</div>';
+    return;
+  }
+
+  document.title = member.name + ' | Faculty Profile | Department of Sociology & Anthropology';
+
+  var specsHtml = member.specializations.map(function (s) { return '<span class="badge badge-primary">' + s + '</span>'; }).join('');
+  var interestsHtml = member.interests.map(function (i) { return '<span class="badge badge-outline">' + i + '</span>'; }).join('');
+
+  var profileLink = member.profileUrl
+    ? '<a href="' + member.profileUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:var(--primary);color:var(--primary)">&#128279; View UCC Directory Profile</a>'
+    : '';
+
+  function listItems(items, emptyText) {
+    if (!Array.isArray(items) || items.length === 0) {
+      return '<p class="text-muted">' + (emptyText || 'Information will be updated soon.') + '</p>';
+    }
+    var itemsHtml = items.map(function (item) {
+      return '<li style="margin-bottom:.5rem;color:var(--muted-fg)">' + item + '</li>';
+    }).join('');
+    return '<ul style="padding-left:1.1rem;line-height:1.7;margin-bottom:.6rem">' + itemsHtml + '</ul>';
+  }
+
+  profileRoot.innerHTML =
+    '<div class="card" style="padding:1.5rem 1.5rem 2rem">' +
+    '<a href="people.html" class="btn btn-ghost" style="margin-bottom:1rem;padding-left:0">&larr; Back to Faculty Directory</a>' +
+    '<h1 class="heading-primary" style="margin-bottom:.5rem">' + member.name + '</h1>' +
+    '<p class="modal-title" style="margin-bottom:1.25rem">' + member.title + (member.position !== member.title ? ' &middot; ' + member.position : '') + '</p>' +
+    '<div class="modal-faculty-grid">' +
+      '<div class="modal-faculty-photo" id="facultyProfilePhoto"></div>' +
+      '<div class="modal-faculty-details">' +
+        '<p style="margin:.25rem 0 1rem"><a href="mailto:' + member.email + '" style="color:var(--primary)">&#9993; ' + member.email + '</a></p>' +
+        '<div class="tabs" style="margin-top:.25rem">' +
+          '<div class="tab-list" role="tablist">' +
+            '<button class="tab-btn active" data-tab="overview-profile" role="tab">Overview</button>' +
+            '<button class="tab-btn" data-tab="background-profile" role="tab">Background</button>' +
+            '<button class="tab-btn" data-tab="projects-profile" role="tab">Projects</button>' +
+            '<button class="tab-btn" data-tab="publications-profile" role="tab">Publications</button>' +
+            '<button class="tab-btn" data-tab="awards-profile" role="tab">Awards</button>' +
+            '<button class="tab-btn" data-tab="leadership-profile" role="tab">Leadership</button>' +
+          '</div>' +
+
+          '<div id="tab-overview-profile" class="tab-content active" role="tabpanel">' +
+            '<h4>Biography</h4><p style="color:var(--muted-fg);line-height:1.8">' + member.bio + '</p>' +
+            '<h4>Specializations</h4><div class="badge-group">' + specsHtml + '</div>' +
+            '<h4>Research Interests</h4><div class="badge-group">' + interestsHtml + '</div>' +
+            '<div style="margin-top:1rem">' + profileLink + '</div>' +
+          '</div>' +
+
+          '<div id="tab-background-profile" class="tab-content" role="tabpanel">' +
+            '<h4>Professional Background</h4>' +
+            listItems(member.background, 'Professional background details will be added soon.') +
+            '<h4>Academic Background</h4>' +
+            listItems(member.education, 'Academic background details will be added soon.') +
+          '</div>' +
+
+          '<div id="tab-projects-profile" class="tab-content" role="tabpanel">' +
+            '<h4>Projects</h4>' +
+            listItems(member.projects, 'Project details will be added soon.') +
+          '</div>' +
+
+          '<div id="tab-publications-profile" class="tab-content" role="tabpanel">' +
+            '<h4>Selected Publications</h4>' +
+            listItems(member.selectedPublications, 'Publication details will be added soon.') +
+          '</div>' +
+
+          '<div id="tab-awards-profile" class="tab-content" role="tabpanel">' +
+            '<h4>Awards and Fellowships</h4>' +
+            listItems(member.fellowshipsAwards, 'Awards and fellowship details will be added soon.') +
+          '</div>' +
+
+          '<div id="tab-leadership-profile" class="tab-content" role="tabpanel">' +
+            '<h4>Leadership and Service</h4>' +
+            listItems(member.leadershipService, 'Leadership and service details will be added soon.') +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+    '</div>';
+
+  var photoContainer = document.getElementById('facultyProfilePhoto');
+  if (!photoContainer) return;
+
+  if (member.image) {
+    var img = document.createElement('img');
+    img.src = member.image;
+    img.alt = member.name;
+    img.className = 'modal-faculty-img';
+    img.onerror = function() {
+      var ph = document.createElement('div');
+      ph.className = 'modal-faculty-placeholder';
+      ph.textContent = member.name.split(' ').map(function(n){return n[0];}).join('');
+      photoContainer.innerHTML = '';
+      photoContainer.appendChild(ph);
+    };
+    onImgLoad(img);
+    photoContainer.appendChild(img);
+  } else {
+    var ph = document.createElement('div');
+    ph.className = 'modal-faculty-placeholder';
+    ph.textContent = member.name.split(' ').map(function(n){return n[0];}).join('');
+    photoContainer.appendChild(ph);
+  }
+
+  // Bind tab switching for dynamically injected profile tabs
+  var profileTabs = profileRoot.querySelector('.tabs');
+  if (profileTabs) {
+    var tabButtons = profileTabs.querySelectorAll('.tab-list .tab-btn');
+    var tabContents = profileTabs.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+
+        tabButtons.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        tabContents.forEach(function (contentEl) {
+          if (contentEl.id === 'tab-' + target) {
+            contentEl.classList.add('active');
+          } else {
+            contentEl.classList.remove('active');
+          }
+        });
+      });
     });
   }
 });
