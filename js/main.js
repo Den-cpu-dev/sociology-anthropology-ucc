@@ -331,6 +331,22 @@ const facultyData = [
     specializations: ["Internal Logistics", "Document Circulation", "Office Support Services"],
     interests: ["Operational Reliability", "Service Support", "Team Collaboration"],
     profileUrl: ""
+  },
+  {
+    id: 24, name: "Head of Transport", title: "Head of Transport", position: "Department General Office",
+    rank: "Non-Teaching Staff", email: "", image: "",
+    bio: "Head of Transport manages the department's transportation logistics and services.",
+    specializations: ["Transport Logistics", "Operations Management"],
+    interests: ["Service Delivery", "Operational Excellence"],
+    profileUrl: ""
+  },
+  {
+    id: 25, name: "Head Cleaner", title: "Head Cleaner", position: "Department General Office",
+    rank: "Non-Teaching Staff", email: "", image: "",
+    bio: "Head Cleaner oversees the maintenance and cleanliness of departmental facilities and spaces.",
+    specializations: ["Facility Maintenance", "Cleanliness Management"],
+    interests: ["Clean Environment", "Facility Care", "Team Leadership"],
+    profileUrl: ""
   }
 ];
 
