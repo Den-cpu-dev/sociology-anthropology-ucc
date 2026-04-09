@@ -523,12 +523,6 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.innerHTML = '<span>View profile</span>';
         imgContainer.appendChild(overlay);
 
-        // Add mobile indicator badge
-        var mobileBadge = document.createElement('div');
-        mobileBadge.className = 'faculty-card-mobile-badge';
-        mobileBadge.innerHTML = '→';
-        imgContainer.appendChild(mobileBadge);
-
         var info = document.createElement('div');
         info.className = 'faculty-card-info';
         info.innerHTML = '<h4>' + member.name + '</h4><p>' + member.title + '</p>' +
