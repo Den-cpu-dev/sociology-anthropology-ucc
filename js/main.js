@@ -42,6 +42,76 @@ function markSectionsForReveal() {
   });
 }
 
+// ==================== CAROUSEL ====================
+var currentSlide = 0;
+var slides = [];
+var autoPlayInterval = null;
+
+function initCarousel() {
+  slides = document.querySelectorAll('.hero-slide');
+  if (slides.length === 0) return;
+  
+  // Show first slide
+  slides[0].classList.add('active');
+  
+  // Create dots
+  var dotsContainer = document.getElementById('carouselDots');
+  if (dotsContainer) {
+    for (var i = 0; i < slides.length; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.setAttribute('data-slide', i);
+      dot.onclick = function(e) {
+        goToSlide(parseInt(e.target.getAttribute('data-slide')));
+      };
+      dotsContainer.appendChild(dot);
+    }
+  }
+  
+  // Start auto-play
+  startAutoPlay();
+}
+
+function showSlide(n) {
+  slides.forEach(function(slide) {
+    slide.classList.remove('active');
+  });
+  var dots = document.querySelectorAll('.carousel-dot');
+  dots.forEach(function(dot) {
+    dot.classList.remove('active');
+  });
+  
+  slides[n].classList.add('active');
+  if (dots[n]) dots[n].classList.add('active');
+  currentSlide = n;
+}
+
+function changeSlide(direction) {
+  clearInterval(autoPlayInterval);
+  var newSlide = (currentSlide + direction + slides.length) % slides.length;
+  showSlide(newSlide);
+  startAutoPlay();
+}
+
+function goToSlide(n) {
+  clearInterval(autoPlayInterval);
+  showSlide(n);
+  startAutoPlay();
+}
+
+function startAutoPlay() {
+  autoPlayInterval = setInterval(function() {
+    var newSlide = (currentSlide + 1) % slides.length;
+    showSlide(newSlide);
+  }, 5000); // Change slide every 5 seconds
+}
+
+// Initialize carousel when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  initCarousel();
+});
+
 // ==================== FACULTY DATA ====================
 const facultyData = [
   {
@@ -175,7 +245,15 @@ const facultyData = [
     profileUrl: ""
   },
   {
-    id: 13, name: "Dr. Micheal Sakyi-Darko", title: "Lecturer", position: "Lecturer",
+    id: 13, name: "Dr. Naa Alakidja Sekyi", title: "Senior Lecturer", position: "Senior Lecturer",
+    rank: "Senior Lecturer", email: "naa.sekyi@ucc.edu.gh", image: "assets/faculty/dr-naa-sekyi.jpg",
+    bio: "Dr. Naa Alakidja Sekyi is a Senior Lecturer in the Department of Sociology and Anthropology.",
+    specializations: ["Sociology", "Qualitative Analysis", "Ethnography"],
+    interests: ["Research", "Social Studies"],
+    profileUrl: ""
+  },
+  {
+    id: 14, name: "Dr. Micheal Sakyi-Darko", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "msakyi-darko@ucc.edu.gh", image: "assets/faculty/dr-micheal-sakyi-darko.jpg",
     bio: "Dr. Micheal Sakyi-Darko is a Lecturer in the Department of Sociology and Anthropology, specializing in urban sociology.",
     specializations: ["Urban Sociology", "Development Studies"],
@@ -183,7 +261,7 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/michael-sakyi-darko"
   },
   {
-    id: 14, name: "Dr. Emmanuel Asante", title: "Lecturer", position: "Lecturer",
+    id: 15, name: "Dr. Emmanuel Asante", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "emmanuel.asante@ucc.edu.gh", image: "assets/faculty/dr-emmanuel-asante.jpg",
     bio: "Dr. Emmanuel Asante is a Lecturer in the Department of Sociology and Anthropology, contributing to teaching and research in various sociological topics.",
     specializations: ["Sociology", "Social Research"],
@@ -191,7 +269,7 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/emmanuel-asante"
   },
   {
-    id: 15, name: "Dr. Albert Annang", title: "Lecturer", position: "Lecturer",
+    id: 16, name: "Dr. Albert Annang", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "albert.annang@ucc.edu.gh", image: "assets/faculty/dr-albert-annang.jpg",
     bio: "Dr. Albert Annang is a Lecturer in the Department of Sociology and Anthropology, contributing to research and teaching in sociological studies.",
     specializations: ["Sociology", "Social Analysis", "Criminology"],
@@ -199,7 +277,7 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/albert-annang"
   },
   {
-    id: 16, name: "Dr. Francis Aning Anokye", title: "Lecturer", position: "Lecturer",
+    id: 17, name: "Dr. Francis Aning Anokye", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "francis.anokye@ucc.edu.gh", image: "assets/faculty/dr-francis-anokye.jpg",
     bio: "Dr. Francis Aning Anokye is a Lecturer in the Department of Sociology and Anthropology, engaged in teaching and research across various sociological topics.",
     specializations: ["Sociology", "Social Research"],
@@ -207,7 +285,7 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/francis-aning-anokye"
   },
   {
-    id: 17, name: "Dr. Daniel Ampem Darko-Asumadu", title: "Lecturer", position: "Lecturer",
+    id: 18, name: "Dr. Daniel Ampem Darko-Asumadu", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "daniel.darko-asumadu@ucc.edu.gh", image: "assets/faculty/dr-daniel-darko-asumadu.jpg",
     bio: "Dr. Daniel Ampem Darko-Asumadu is a Lecturer in the Department of Sociology and Anthropology, contributing to the academic and research mission of the department.",
     specializations: ["Sociology", "Social Studies"],
@@ -215,7 +293,7 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/daniel-ampem-darko-asumadu"
   },
   {
-    id: 18, name: "Dr. Raymond Kwasi Boasinke", title: "Lecturer", position: "Departmental Registration & Exams Officer",
+    id: 19, name: "Dr. Raymond Kwasi Boasinke", title: "Lecturer", position: "Departmental Registration & Exams Officer",
     rank: "Lecturer", email: "raymond.boasinke@ucc.edu.gh", image: "assets/faculty/dr-raymond-boasinke.jpg",
     bio: "Dr. Raymond Kwasi Boasinke is a Lecturer and serves as the Departmental Registration & Exams Officer. His research focuses on sociology of development, gender studies, and social transformation.",
     specializations: ["Sociology of Development", "Gender Studies"],
@@ -223,7 +301,7 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/raymond-kwasi-boasinke"
   },
   {
-    id: 19, name: "Ms. Dilys Amoabeng", title: "Principal Research Assistant (Teaching Associate)", position: "Teaching Staff",
+    id: 20, name: "Ms. Dilys Amoabeng", title: "Principal Research Assistant (Teaching Associate)", position: "Teaching Staff",
     rank: "Lecturer", email: "dilys.amoabeng@ucc.edu.gh", image: "assets/faculty/ms-dilys-amoabeng.jpg",
     bio: "Ms. Dilys Amoabeng is a Principal Research Assistant and Teaching Associate in the Department of Sociology and Anthropology, supporting teaching and research activities.",
     specializations: ["Research Support", "Teaching"],
@@ -231,7 +309,7 @@ const facultyData = [
     profileUrl: "https://directory.ucc.edu.gh/p/dilys-amoabeng"
   },
   {
-    id: 20, name: "Mrs. Rebecca Paintsil Quarm", title: "Chief Administrative Assistant", position: "Department General Office",
+    id: 21, name: "Mrs. Rebecca Paintsil Quarm", title: "Chief Administrative Assistant", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "rebecca.quarm@ucc.edu.gh", image: "",
     bio: "Mrs. Rebecca Paintsil Quarm is the Chief Administrative Assistant at the Department General Office. She supports day-to-day administrative coordination, documentation workflows, and communication across teaching, research, and student services.",
     specializations: ["Administrative Coordination", "Records Management", "Department Operations"],
@@ -444,6 +522,12 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.className = 'faculty-card-overlay';
         overlay.innerHTML = '<span>View profile</span>';
         imgContainer.appendChild(overlay);
+
+        // Add mobile indicator badge
+        var mobileBadge = document.createElement('div');
+        mobileBadge.className = 'faculty-card-mobile-badge';
+        mobileBadge.innerHTML = '→';
+        imgContainer.appendChild(mobileBadge);
 
         var info = document.createElement('div');
         info.className = 'faculty-card-info';
@@ -927,12 +1011,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ==================== PARALLAX SCROLL EFFECT ====================
   var heroSection = document.querySelector('.hero');
-  if (heroSection) {
-    heroBg.classList.add('parallax-bg');
+  var heroBgElement = document.querySelector('.hero-bg');
+  if (heroSection && heroBgElement) {
+    heroBgElement.classList.add('parallax-bg');
     window.addEventListener('scroll', function() {
       var scrollPos = window.scrollY;
       var parallaxOffset = scrollPos * 0.15; // 15% of scroll distance
-      heroBg.style.transform = 'scale(1) translateY(' + parallaxOffset + 'px)';
+      heroBgElement.style.transform = 'scale(1) translateY(' + parallaxOffset + 'px)';
     });
   }
 

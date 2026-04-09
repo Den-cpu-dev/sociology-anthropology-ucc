@@ -75,13 +75,20 @@ header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px 
 @media(max-width:640px){.navbar-brand-text{display:none}.top-bar .campus-label,.top-bar-divider,.top-bar .phone-link{display:none}}
 
 /* ===================== HERO ===================== */
-.hero{position:relative;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--primary-dark);background:linear-gradient(45deg,#1a3a0f,#2d5a1f,#1f4a3a,#2d5a1f);background-size:400% 400%;animation:gradientShift 12s ease infinite}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 8s ease;transform:scale(1.02)}
-body.loaded .hero-bg{transform:scale(1)}
-.hero-overlay{position:absolute;inset:0;background:var(--hero-overlay)}
+.hero{position:relative;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--primary-dark)}
+.hero-carousel{position:absolute;inset:0;width:100%;height:100%}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 0.8s ease-in-out}
+.hero-slide.active{opacity:1}
+.hero-overlay{position:absolute;inset:0;background:var(--hero-overlay);z-index:1}
 .hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:3rem 1.5rem;max-width:800px}
 .hero-content .emblem{width:100px;height:100px;margin:0 auto 1.5rem;border-radius:50%;object-fit:cover;padding:10px;background:rgba(255,255,255,.15);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.25);box-shadow:0 8px 32px rgba(0,0,0,.25),0 0 40px rgba(255,255,255,.08);animation:floatAndPulse 4s ease-in-out infinite}
-@keyframes floatAndPulse{0%,100%{transform:translateY(0) scale(1);filter:drop-shadow(0 8px 32px rgba(0,0,0,.25)) drop-shadow(0 0 20px rgba(232,168,48,.1))}50%{transform:translateY(-10px) scale(1.02);filter:drop-shadow(0 8px 32px rgba(0,0,0,.25)) drop-shadow(0 0 40px rgba(232,168,48,.25))}}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.carousel-controls{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;align-items:center;gap:2rem}
+.carousel-btn{background:rgba(255,255,255,0.3);border:2px solid rgba(255,255,255,0.5);color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:all 0.3s ease}
+.carousel-btn:hover{background:rgba(255,255,255,0.5);border-color:#fff}
+.carousel-dots{display:flex;gap:0.75rem}
+.carousel-dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s ease}
+.carousel-dot.active{background:#fff;width:32px;border-radius:6px}
+@keyframes floatAndPulse{0%,100%{transform:translateY(0) scale(1);filter:drop-shadow(0 8px 32px rgba(0,0,0,.25)) drop-shadow(0 0 20px rgba(232,168,48,.1))}50%{transform:translateY(-10px) scale(1.02);filter:drop-shadow(0 8px 32px rgba(0,0,0,.25)) drop-shadow(0 0 40px rgba(232,168,48,.25))}}
 .hero-content h1{font-size:2.5rem;font-weight:800;color:#fff;margin-bottom:.5rem}
 .hero-content .subtitle{font-size:1.2rem;opacity:.9;margin-bottom:.25rem}
 .hero-content .desc{font-size:1rem;opacity:.8;max-width:600px;margin:0 auto 2rem}
@@ -539,6 +546,8 @@ tr.course-item:active{transform:none}
 .faculty-card-overlay{position:absolute;inset:0;background:rgba(45,60,20,.6);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease}
 .faculty-card:hover .faculty-card-overlay{opacity:1}
 .faculty-card-overlay span{color:#fff;font-size:.85rem;font-weight:600;background:rgba(0,0,0,.4);padding:.3rem .75rem;border-radius:var(--radius)}
+.faculty-card-mobile-badge{position:absolute;bottom:.5rem;right:.5rem;background:rgba(232,168,48,.9);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;opacity:0;transition:opacity .25s ease;z-index:2}
+@media(max-width:768px){.faculty-card-overlay{opacity:0.7}.faculty-card-overlay::after{content:'Tap to view profile';position:absolute;font-size:.75rem;font-weight:600;color:#fff;background:rgba(0,0,0,.5);padding:.25rem .5rem;border-radius:var(--radius);bottom:.5rem;right:.5rem;white-space:nowrap}.faculty-card-mobile-badge{opacity:1}}
 .faculty-card-info{padding:.75rem;text-align:center}
 .faculty-card-info h4{font-size:.85rem;font-weight:600;line-height:1.3}
 .faculty-card-info p{font-size:.75rem;color:var(--muted-fg);margin-top:.2rem}
