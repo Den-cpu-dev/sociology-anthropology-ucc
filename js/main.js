@@ -310,22 +310,22 @@ const facultyData = [
   },
   {
     id: 21, name: "Mrs. Rebecca Paintsil Quarm", title: "Chief Administrative Assistant", position: "Department General Office",
-    rank: "Non-Teaching Staff", email: "rebecca.quarm@ucc.edu.gh", image: "",
+    rank: "Non-Teaching Staff", email: "rebecca.quarm@ucc.edu.gh", image: "assets/faculty/mrs-rebecca-quarm.jpg",
     bio: "Mrs. Rebecca Paintsil Quarm is the Chief Administrative Assistant at the Department General Office. She supports day-to-day administrative coordination, documentation workflows, and communication across teaching, research, and student services.",
     specializations: ["Administrative Coordination", "Records Management", "Department Operations"],
     interests: ["Service Delivery", "Workflow Improvement", "Student and Staff Support"],
     profileUrl: ""
   },
   {
-    id: 21, name: "Ms. Beatrice Mensah", title: "Principal Administrative Assistant", position: "Department General Office",
-    rank: "Non-Teaching Staff", email: "beatrice.mensah@ucc.edu.gh", image: "",
+    id: 22, name: "Ms. Beatrice Mensah", title: "Principal Administrative Assistant", position: "Department General Office",
+    rank: "Non-Teaching Staff", email: "beatrice.mensah@ucc.edu.gh", image: "assets/faculty/ms-beatrice-mensah.jpg",
     bio: "Ms. Beatrice Mensah is the Principal Administrative Assistant in the Department General Office. She provides frontline administrative support, helps coordinate internal correspondence, and assists with student-facing office processes.",
     specializations: ["Office Administration", "Student Services Support", "Correspondence Management"],
     interests: ["Efficient Administration", "Process Organization", "Stakeholder Communication"],
     profileUrl: ""
   },
   {
-    id: 22, name: "Mr. Godfred Owusu Fordjour", title: "Head Messenger", position: "Department General Office",
+    id: 23, name: "Mr. Godfred Owusu Fordjour", title: "Head Messenger", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "godfred.owusu.fordjour@ucc.edu.gh", image: "",
     bio: "Mr. Godfred Owusu Fordjour serves as Head Messenger for the Department General Office. He supports internal logistics, document circulation, and timely delivery of official departmental communications.",
     specializations: ["Internal Logistics", "Document Circulation", "Office Support Services"],
