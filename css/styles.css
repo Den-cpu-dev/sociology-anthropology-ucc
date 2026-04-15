@@ -211,6 +211,10 @@ header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px 
 .testimonial-card{margin:0;padding:1.5rem;border:1px solid var(--border);border-radius:calc(var(--radius) * 1.5);background:var(--card);font-size:1rem;line-height:1.8;display:flex;flex-direction:column;justify-content:space-between;gap:1rem;box-shadow:var(--shadow-sm)}
 .testimonial-card p{font-style:italic;color:var(--muted-fg)}
 .testimonial-card footer{font-size:.88rem;font-style:normal;color:var(--primary);font-weight:600}
+.testimonial-content{display:flex;flex-direction:column;gap:1rem}
+.testimonial-card blockquote{margin:0;font-size:1rem;padding-left:1rem;border-left:3px solid var(--primary);opacity:1}
+.testimonial-card blockquote p{margin:0}
+.role{display:block;font-size:.85rem;color:var(--muted-fg);font-weight:500;margin-top:.25rem}
 
 /* ===================== FACULTY ===================== */
 .faculty-card{cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--card)}
@@ -314,6 +318,8 @@ header{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px 
 
 /* ===================== BLOCKQUOTE ===================== */
 blockquote{font-style:italic;font-size:1.1rem;opacity:.9;line-height:1.7;max-width:700px;margin:0 auto 1.5rem}
+.section-dark blockquote{color:var(--primary-fg);opacity:1}
+.section-dark blockquote p{color:var(--primary-fg);font-style:italic;margin:.5rem 0}
 
 /* ===================== FOOTER ===================== */
 .footer{background:var(--primary);color:var(--primary-fg);padding:3rem 0 0;margin-top:auto}
@@ -428,6 +434,14 @@ blockquote{font-style:italic;font-size:1.1rem;opacity:.9;line-height:1.7;max-wid
 .hod-photo img{width:100%;height:100%;object-fit:cover}
 .hod-name{font-weight:600;margin:0}
 .hod-title{font-size:.9rem;opacity:.8;margin:.25rem 0 0}
+.hod-welcome-cta{max-width:400px;margin:0 auto}
+.hod-welcome-link{display:block;text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.hod-welcome-link:hover{transform:scale(1.05)}
+.hod-welcome-image{position:relative;aspect-ratio:1/1;border-radius:calc(var(--radius) * 2);overflow:hidden;margin-bottom:1rem;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.hod-welcome-image img{width:100%;height:100%;object-fit:cover}
+.hod-welcome-caption{text-align:center;display:flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;color:var(--primary);font-size:1rem}
+.hod-welcome-caption .arrow{transition:transform .3s ease}
+.hod-welcome-link:hover .hod-welcome-caption .arrow{transform:translateX(4px)}
 
 /* ===================== ACADEMIC TABLES ===================== */
 .acad-table{width:100%;border-collapse:collapse;font-size:.95rem}

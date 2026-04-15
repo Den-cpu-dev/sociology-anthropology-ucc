@@ -2511,7 +2511,7 @@ const courseData = {
 
   "SBC011": {
     name: "Society and Social Change", credits: "3",
-    lecturer: "Mr. Michael Sakyi-Darko",
+    lecturer: "Dr. Michael Sakyi-Darko",
     description: "The course explains the concepts and processes of social change. It discusses the evolution of human cultures, behaviours and institutions over time and the factors that has led to these transformations. This course covers topics such as the basic concepts of social change and society, nature of social change, sources of social change, classical and contemporary drivers of social change and development such as colonialism, neo-colonialism, globalization, democratization, urbanisation, migration, financial inclusion, climate change technology and gender dynamics. Other issues include the theoretical underpinnings of social change in societies, effect of social change on development, the general patterns of adaptation to changes at the individual, group and societal level and the conflict dynamics and its management.",
     objectives: [
       "Explain concept and processes of social change in Ghana and its impact on conflict and conflict management.",

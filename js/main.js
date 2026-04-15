@@ -118,7 +118,7 @@ const facultyData = [
     id: 1, name: "Prof. Georgina Yaa Oduro", title: "Associate Professor", position: "Head of Department",
     rank: "Professor", email: "gyoduro@ucc.edu.gh", image: "assets/faculty/prof-georgina.jpg",
     bio: "Prof. Georgina Yaa Oduro is an Associate Professor and the current Head of the Department of Sociology and Anthropology, University of Cape Coast, Ghana. She is the immediate past Director (2019-2023) of the Centre for Gender Research, Advocacy and Documentation (CEGRAD) of the same university. She also served as Hall Warden of Oguaa Hall in 2024, where she was responsible for the welfare of over 1,300 students. She earned a first degree in Sociology with Political Science from the University of Ghana, Legon, a master's degree from the University of Westminster, London, and a PhD from the University of Cambridge, UK. Her doctoral research focused on gender relations, sexuality, and HIV/AIDS education from a youth culture perspective. Her work spans gender issues, violence, sexuality, youth cultures, marginalized populations, popular culture, race and ethnicity, and tangible and intangible cultural heritage in ocean governance and the blue economy. She has expertise in qualitative research methodologies and has received multiple awards and fellowships, including the Takemi Fellowship in International Health (2016-2017) at Harvard T.H. Chan School of Public Health, the Martha Farrell Fellowship (2020/2021), and the MASHAV Fellowship (2023). She has contributed to major handbooks published by Palgrave and Routledge, served as CEGRAD's Coordinator for Advocacy and Outreach (2018-2019), and led or co-led local and international research projects including CODESRIA's MRI project, One Ocean Hub, and multi-country studies on gender, creative industries, and women in trans-national trade. She teaches undergraduate and graduate Sociology courses, supervises and examines master's and PhD theses, serves on several boards and committees, and is on the Editorial Board of the Journal of Gender Based Violence (University of Bristol, UK).",
-    specializations: ["Gender Studies", "Youth Cultures", "Qualitative Research Methodologies", "Blue Economy and Ocean Governance", "Race and Ethnicity"],
+    specializations: ["Gender Studies", "Youth Cultures", "Blue Economy and Ocean Governance", "Work and Occupation"],
     interests: ["Gender Issues", "Violence", "Sexuality", "Youth and Popular Cultures", "Marginalized Populations", "Tangible and Intangible Heritage", "International Collaborative Research"],
     background: [
       "Current Head, Department of Sociology and Anthropology, University of Cape Coast (UCC), Ghana.",
@@ -159,193 +159,193 @@ const facultyData = [
   {
     id: 2, name: "Prof. (Mrs.) Henrietta Abane", title: "Associate Professor", position: "Associate Professor",
     rank: "Professor", email: "henrietta.abane@ucc.edu.gh", image: "assets/faculty/prof-henrietta-abane.jpg",
-    bio: "Prof. (Mrs.) Henrietta Abane is an Associate Professor in the Department of Sociology and Anthropology with extensive research experience in gender, development, and social issues.",
-    specializations: ["Gender Studies", "Development Studies"],
-    interests: ["Women and Development", "Gender Equality", "Social Policy"],
+    bio: "Prof. (Mrs.) Henrietta Abane is an Associate Professor in the Department of Sociology and Anthropology with extensive research experience in gender, development, and social issues affecting women and marginalized communities.",
+    specializations: ["Gender Studies", "Sociology of Development", "Rural Sociology"],
+    interests: ["Women and Development", "Gender Equality", "Social Policy", "Gender-Based Violence Prevention", "Women Empowerment"],
     profileUrl: "https://directory.ucc.edu.gh/p/henrietta-abane"
   },
   {
     id: 3, name: "Prof. John Windie Ansah", title: "Associate Professor", position: "Academic Advisor",
     rank: "Professor", email: "john.ansah@ucc.edu.gh", image: "assets/faculty/prof-john-ansah.jpg",
-    bio: "Prof. John Windie Ansah is an Associate Professor in the Department of Sociology and Anthropology. He serves as Academic Advisor and is a leading expert in political economy and public policy analysis.",
-    specializations: ["Blue Economy", "Coastal Sociology", "Political Economy"],
-    interests: ["Political Economy and Public Policy Analysis"],
+    bio: "Prof. John Windie Ansah is an Associate Professor in the Department of Sociology and Anthropology. He serves as Academic Advisor and is a leading expert in political economy, public policy analysis, and blue economy governance.",
+    specializations: ["Blue Economy", "Sociological Theory", "Political Economy"],
+    interests: ["Political Economy and Public Policy Analysis", "Coastal Communities", "Environmental Sociology", "Development Policy"],
     profileUrl: "https://directory.ucc.edu.gh/p/john-windie-ansah"
   },
   {
     id: 4, name: "Prof. Daniel Yaw Fiaveh", title: "Associate Professor", position: "Research Coordinator, CEGRAD",
     rank: "Professor", email: "dfiaveh@ucc.edu.gh", image: "assets/faculty/prof-daniel-fiaveh.jpg",
-    bio: "Prof. Daniel Yaw Fiaveh is a Ghanaian sociologist-turned-anthropologist and an Associate Professor in studies of men, gender, and sexuality at the University of Cape Coast.",
-    specializations: ["Gender Studies", "Masculinity", "Qualitative Research Methodology", "Sex Studies", "Sexuality"],
-    interests: ["Anthropology/Sociology of Sex", "Men and Masculinities", "Sex and Culture", "Sexual Health", "Sexuality Education"],
+    bio: "Prof. Daniel Yaw Fiaveh is a Ghanaian sociologist-turned-anthropologist and an Associate Professor in studies of men, gender, and sexuality at the University of Cape Coast. He is an active researcher and lecturer who examines post-colonial African contexts, contributing significantly to anthropological scholarship through international academic platforms. He serves as the Department's Registration and Examination Officer.",
+    specializations: ["Gender Studies", "Masculinity", "Sex Studies"],
+    interests: ["Anthropology/Sociology of Sex", "Men and Masculinities", "Sex and Culture", "Sexual Health", "Sexuality Education", "Demystifying Anthropology", "Post-Colonial Africa", "Cultural Analysis"],
     profileUrl: "https://directory.ucc.edu.gh/p/daniel-yaw-fiaveh"
   },
   {
     id: 5, name: "Prof. William Boateng", title: "Professor", position: "Professor",
     rank: "Professor", email: "william.boateng@ucc.edu.gh", image: "assets/faculty/prof-william-boateng.jpg",
-    bio: "Prof. William Boateng is a Professor in the Department of Sociology and Anthropology, specializing in advanced social research methods and quantitative analysis.",
-    specializations: ["Social Research Methods", "Quantitative Analysis"],
-    interests: ["Survey Research", "Statistical Analysis", "Research Design"],
+    bio: "Prof. William Boateng is a Professor in the Department of Sociology and Anthropology, specializing in advanced social research methods, quantitative analysis, and research methodology training for graduate students.",
+    specializations: ["Medical Sociology", "Knowledge Management", "Social Planning and Policy"],
+    interests: ["Survey Research", "Statistical Analysis", "Research Design", "Qualitative Methods Training", "Mixed Methods Approaches"],
     profileUrl: "https://directory.ucc.edu.gh/p/william-boateng"
   },
   {
     id: 6, name: "Prof. Alex Somuah Obeng", title: "Associate Professor", position: "Associate Professor",
     rank: "Professor", email: "alex.obeng@ucc.edu.gh", image: "assets/faculty/prof-alex-obeng.jpg",
-    bio: "Prof. Alex Somuah Obeng is an Associate Professor in the Department of Sociology and Anthropology, specializing in social theory and contemporary social issues in Ghana and Africa.",
-    specializations: ["Social Theory", "African Sociology"],
-    interests: ["Social Change", "Contemporary Social Issues"],
+    bio: "Prof. Alex Somuah Obeng is an Associate Professor in the Department of Sociology and Anthropology, specializing in social theory, contemporary social issues, and sociological analysis of African contexts.",
+    specializations: ["Sociology of Education", "Environmental Sociology", "Criminology"],
+    interests: ["Social Change", "Contemporary Social Issues", "Modernization and Tradition", "African Development", "Social Transformation"],
     profileUrl: "https://directory.ucc.edu.gh/p/alex-somuah-obeng"
   },
   {
     id: 7, name: "Prof. Eric Koka", title: "Associate Professor", position: "Associate Professor",
     rank: "Professor", email: "eric.koka@ucc.edu.gh", image: "assets/faculty/prof-eric-koka.jpg",
-    bio: "Prof. Eric Koka is an Associate Professor in the Department of Sociology and Anthropology with expertise in social research and community development.",
-    specializations: ["Social Research", "Community Development"],
-    interests: ["Social Development", "Research Methods"],
+    bio: "Prof. Eric Koka is an Associate Professor in the Department of Sociology and Anthropology with expertise in social research, community development, and rural-urban social dynamics.",
+    specializations: ["Public Health", "Community Development", "Medical Sociology"],
+    interests: ["Social Development", "Research Methods", "Community Engagement", "Rural Development", "Participatory Research"],
     profileUrl: "https://directory.ucc.edu.gh/p/eric-koka"
   },
   {
     id: 8, name: "Dr. Razak Jaha Imoro", title: "Senior Lecturer", position: "Senior Lecturer",
     rank: "Senior Lecturer", email: "razak.imoro@ucc.edu.gh", image: "assets/faculty/dr-razak-imoro.jpg",
-    bio: "Dr. Razak Jaha Imoro is a Senior Lecturer at the Department of Sociology and Anthropology. His research focuses on conflict management, migration studies, and development issues in Africa.",
+    bio: "Dr. Razak Jaha Imoro is a Senior Lecturer at the Department of Sociology and Anthropology. His research focuses on conflict resolution, development studies, and migration in African contexts.",
     specializations: ["Conflict and Conflict Resolution", "Development Studies", "Migration"],
-    interests: ["Conflict Management", "Development", "Environment and Development", "Migration", "Migration Studies"],
+    interests: ["Conflict Management", "Development", "Environment and Development", "Migration", "Migration Studies", "Protection and Community Relations", "Peace Building"],
     profileUrl: "https://directory.ucc.edu.gh/p/razak-jaha-imoro"
   },
   {
     id: 9, name: "Dr. Edgar Takyi Akonor", title: "Senior Lecturer", position: "Academic Advisor",
     rank: "Senior Lecturer", email: "eakonor@ucc.edu.gh", image: "assets/faculty/dr-edgar-akonor.jpg",
-    bio: "Dr. Edgar Takyi Akonor is a Senior Lecturer in the Department of Sociology and Anthropology. He serves as Academic Advisor and specializes in sociology of sport.",
-    specializations: ["Sociology of Sport", "Social Institutions"],
-    interests: ["Sport and Society", "Social Structures"],
+    bio: "Dr. Edgar Takyi Akonor is a Senior Lecturer in the Department of Sociology and Anthropology. He serves as Academic Advisor and specializes in sociology of sport and leisure, examining social structures and institutional dynamics.",
+    specializations: ["Sociology of Sport", "Criminology", "Criminal Justice and Security"],
+    interests: ["Sport and Society", "Social Structures", "Youth and Sport", "Community Participation", "Institutional Analysis"],
     profileUrl: "https://directory.ucc.edu.gh/p/edgar-takyi-akonor"
   },
   {
     id: 10, name: "Dr. Solomon Sika-Bright", title: "Senior Lecturer", position: "Senior Lecturer",
     rank: "Senior Lecturer", email: "solomon.sika-bright@ucc.edu.gh", image: "assets/faculty/dr-solomon-sika-bright.jpg",
-    bio: "Dr. Solomon Sika-Bright is a Senior Lecturer specializing in social demography and sociology of health and medicine.",
+    bio: "Dr. Solomon Sika-Bright is a Senior Lecturer specializing in social demography, sociology of health and medicine, and population studies with focus on African health systems.",
     specializations: ["Social Demography", "Sociology of Health and Medicine"],
-    interests: ["International Relations", "Social Demography", "Social Deviance and Crime", "Sociological Theory"],
+    interests: ["International Relations", "Social Demography", "Social Deviance and Crime", "Sociological Theory", "Public Health and Society"],
     profileUrl: "https://directory.ucc.edu.gh/p/solomon-sika-bright"
   },
   {
     id: 11, name: "Dr. Brempong Osei-Tutu", title: "Senior Lecturer", position: "Senior Lecturer",
     rank: "Senior Lecturer", email: "brempong.osei-tutu@ucc.edu.gh", image: "assets/faculty/dr-brempong-osei-tutu.jpg",
-    bio: "Dr. Brempong Osei-Tutu is a Senior Lecturer in the Department of Sociology and Anthropology with extensive experience in sociological research and teaching.",
-    specializations: ["Sociology", "Social Research"],
-    interests: ["Social Theory", "Research Methods"],
+    bio: "Dr. Brempong Osei-Tutu is a Senior Lecturer in the Department of Sociology and Anthropology with expertise in archaeology, cultural representation, and the study of memorial entrepreneurism.",
+    specializations: ["Archaeology", "Cultural Representation", "Memorial Entrepreneurism"],
+    interests: ["Social Theory", "Research Methods", "Fieldwork and Ethnography", "Data Interpretation", "Contemporary Society"],
     profileUrl: "https://directory.ucc.edu.gh/p/brempong-osei-tutu"
   },
   {
     id: 12, name: "Dr. Saibu Mutaru", title: "Senior Lecturer", position: "Senior Lecturer",
     rank: "Senior Lecturer", email: "smutaru@ucc.edu.gh", image: "assets/faculty/dr-saibu-mutaru.jpg",
-    bio: "Dr. Saibu Mutaru is a Senior Lecturer in the Department of Sociology and Anthropology. His research interests include medical anthropology, religion, and social change.",
+    bio: "Dr. Saibu Mutaru is a Senior Lecturer in the Department of Sociology and Anthropology. His research interests include medical anthropology and sociology of religion in African contexts. He is an active scholar who contributes to international academic discourse and has held lectures at major universities globally, including the University of Birmingham.",
     specializations: ["Medical Anthropology", "Sociology of Religion"],
-    interests: ["Medical Anthropology", "Religion", "Social Change"],
-    profileUrl: ""
+    interests: ["Medical Anthropology", "Religion", "Social Change", "African Perspectives", "Cultural Studies", "International Academic Collaboration"],
+    profileUrl: "https://directory.ucc.edu.gh/p/saibu-mutaru"
   },
   {
     id: 13, name: "Dr. Naa Alakidja Sekyi", title: "Senior Lecturer", position: "Senior Lecturer",
     rank: "Senior Lecturer", email: "naa.sekyi@ucc.edu.gh", image: "assets/faculty/dr-naa-sekyi.jpg",
-    bio: "Dr. Naa Alakidja Sekyi is a Senior Lecturer in the Department of Sociology and Anthropology.",
-    specializations: ["Sociology", "Qualitative Analysis", "Ethnography"],
-    interests: ["Research", "Social Studies"],
+    bio: "Dr. Naa Adjeley Alakija Sekyi is a Senior Lecturer in the Department of Sociology and Anthropology, specializing in gender and sexualities, family studies, and gender and health issues.",
+    specializations: ["Gender and Sexualities", "Family Studies", "Gender and Health"],
+    interests: ["Research", "Social Studies", "Cultural Documentation", "Field Research", "Social Organization"],
     profileUrl: ""
   },
   {
     id: 14, name: "Dr. Micheal Sakyi-Darko", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "msakyi-darko@ucc.edu.gh", image: "assets/faculty/dr-micheal-sakyi-darko.jpg",
-    bio: "Dr. Micheal Sakyi-Darko is a Lecturer in the Department of Sociology and Anthropology, specializing in urban sociology.",
-    specializations: ["Urban Sociology", "Development Studies"],
-    interests: ["Urbanization", "Social Problems", "Urban Development"],
+    bio: "Dr. Michael Sakyi-Darko is a Lecturer in the Department of Sociology and Anthropology, specializing in urban sociology, rural and development studies, and community participation.",
+    specializations: ["Urban Sociology", "Rural and Development Studies", "Community Participation"],
+    interests: ["Urbanization", "Social Problems", "Urban Development", "Migration to Cities", "Urban Planning and Society"],
     profileUrl: "https://directory.ucc.edu.gh/p/michael-sakyi-darko"
   },
   {
     id: 15, name: "Dr. Emmanuel Asante", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "emmanuel.asante@ucc.edu.gh", image: "assets/faculty/dr-emmanuel-asante.jpg",
-    bio: "Dr. Emmanuel Asante is a Lecturer in the Department of Sociology and Anthropology, contributing to teaching and research in various sociological topics.",
-    specializations: ["Sociology", "Social Research"],
-    interests: ["Social Issues", "African Society"],
+    bio: "Dr. Emmanuel Asante is a Lecturer in the Department of Sociology and Anthropology, contributing to teaching and research in traditional medicine, sociology of education, and popular culture.",
+    specializations: ["Traditional Medicine", "Sociology of Education", "Popular Culture"],
+    interests: ["Social Issues", "African Society", "Social Change", "Community Studies", "Applied Sociology"],
     profileUrl: "https://directory.ucc.edu.gh/p/emmanuel-asante"
   },
   {
     id: 16, name: "Dr. Albert Annang", title: "Lecturer", position: "Lecturer",
-    rank: "Lecturer", email: "albert.annang@ucc.edu.gh", image: "assets/faculty/dr-albert-annang.jpg",
-    bio: "Dr. Albert Annang is a Lecturer in the Department of Sociology and Anthropology, contributing to research and teaching in sociological studies.",
-    specializations: ["Sociology", "Social Analysis", "Criminology"],
-    interests: ["Social Research", "Social Problems"],
+    rank: "Lecturer", email: "albert.annang@ucc.edu.gh", image: "assets/faculty/Dr. Annang.jpg",
+    bio: "Dr. Albert Annang is a Lecturer in the Department of Sociology and Anthropology, contributing to research and teaching with expertise in criminology, sociology of education, and sociology of internet.",
+    specializations: ["Criminology", "Sociology of Education", "Sociology of Internet"],
+    interests: ["Social Research", "Social Problems", "Crime and Justice", "Social Deviance", "Institutional Analysis"],
     profileUrl: "https://directory.ucc.edu.gh/p/albert-annang"
   },
   {
     id: 17, name: "Dr. Francis Aning Anokye", title: "Lecturer", position: "Lecturer",
-    rank: "Lecturer", email: "francis.anokye@ucc.edu.gh", image: "assets/faculty/dr-francis-anokye.jpg",
-    bio: "Dr. Francis Aning Anokye is a Lecturer in the Department of Sociology and Anthropology, engaged in teaching and research across various sociological topics.",
-    specializations: ["Sociology", "Social Research"],
-    interests: ["Social Issues", "Research Methodology"],
+    rank: "Lecturer", email: "francis.anokye@ucc.edu.gh", image: "assets/faculty/Dr. Anokye.jpg",
+    bio: "Dr. Francis Aning Anokye is a Lecturer in the Department of Sociology and Anthropology, engaged in teaching and research in environmental sociology, sociology of development, and livelihood studies.",
+    specializations: ["Environmental Sociology", "Sociology of Development", "Livelihood Studies"],
+    interests: ["Social Issues", "Research Methodology", "Theoretical Foundations", "Empirical Research", "Data Analysis"],
     profileUrl: "https://directory.ucc.edu.gh/p/francis-aning-anokye"
   },
   {
     id: 18, name: "Dr. Daniel Ampem Darko-Asumadu", title: "Lecturer", position: "Lecturer",
     rank: "Lecturer", email: "daniel.darko-asumadu@ucc.edu.gh", image: "assets/faculty/dr-daniel-darko-asumadu.jpg",
-    bio: "Dr. Daniel Ampem Darko-Asumadu is a Lecturer in the Department of Sociology and Anthropology, contributing to the academic and research mission of the department.",
-    specializations: ["Sociology", "Social Studies"],
-    interests: ["Social Research", "Community Studies"],
+    bio: "Dr. Daniel Ampem Darko-Asumadu is a Lecturer in the Department of Sociology and Anthropology, specializing in work-life balance and organizational behaviour, working with vulnerable groups, and quantitative data analysis.",
+    specializations: ["Work-Life Balance and Organisational Behaviour", "Working with Vulnerable Groups", "Quantitative Data Analysis"],
+    interests: ["Social Research", "Community Studies", "Community-Based Research", "Social Engagement", "participatory Methods"],
     profileUrl: "https://directory.ucc.edu.gh/p/daniel-ampem-darko-asumadu"
   },
   {
     id: 19, name: "Dr. Raymond Kwasi Boasinke", title: "Lecturer", position: "Departmental Registration & Exams Officer",
     rank: "Lecturer", email: "raymond.boasinke@ucc.edu.gh", image: "assets/faculty/dr-raymond-boasinke.jpg",
-    bio: "Dr. Raymond Kwasi Boasinke is a Lecturer and serves as the Departmental Registration & Exams Officer. His research focuses on sociology of development, gender studies, and social transformation.",
+    bio: "Dr. Raymond Kwasi Boasinke is a Lecturer and serves as the Departmental Registration & Exams Officer. His research focuses on sociology of development and gender studies.",
     specializations: ["Sociology of Development", "Gender Studies"],
-    interests: ["Development", "Gender Issues", "Social Change"],
+    interests: ["Development", "Gender Issues", "Social Change", "Development Initiatives", "Institutional Reform", "Policy Analysis"],
     profileUrl: "https://directory.ucc.edu.gh/p/raymond-kwasi-boasinke"
   },
   {
     id: 20, name: "Ms. Dilys Amoabeng", title: "Principal Research Assistant (Teaching Associate)", position: "Teaching Staff",
     rank: "Lecturer", email: "dilys.amoabeng@ucc.edu.gh", image: "assets/faculty/ms-dilys-amoabeng.jpg",
-    bio: "Ms. Dilys Amoabeng is a Principal Research Assistant and Teaching Associate in the Department of Sociology and Anthropology, supporting teaching and research activities.",
-    specializations: ["Research Support", "Teaching"],
-    interests: ["Social Research", "Student Support"],
+    bio: "Ms. Dilys Amoabeng is a Principal Research Assistant and Teaching Associate in the Department of Sociology and Anthropology, providing crucial support for teaching and research activities across various departmental initiatives.",
+    specializations: ["Gender Studies", "Cultural Diversity", "Social and Cultural Anthropology"],
+    interests: ["Social Research", "Student Support", "Research Coordination", "Teaching Development", "Academic Excellence"],
     profileUrl: "https://directory.ucc.edu.gh/p/dilys-amoabeng"
   },
   {
     id: 21, name: "Mrs. Rebecca Paintsil Quarm", title: "Chief Administrative Assistant", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "rebecca.quarm@ucc.edu.gh", image: "assets/faculty/mrs-rebecca-quarm.jpg",
     bio: "Mrs. Rebecca Paintsil Quarm is the Chief Administrative Assistant at the Department General Office. She supports day-to-day administrative coordination, documentation workflows, and communication across teaching, research, and student services.",
-    specializations: ["Administrative Coordination", "Records Management", "Department Operations"],
-    interests: ["Service Delivery", "Workflow Improvement", "Student and Staff Support"],
+    specializations: ["Administrative Coordination", "Records Management", "Department Operations", "Document Management", "Office Leadership"],
+    interests: ["Service Delivery", "Workflow Improvement", "Student and Staff Support", "Operations Management", "Administrative Excellence"],
     profileUrl: ""
   },
   {
     id: 22, name: "Ms. Beatrice Mensah", title: "Principal Administrative Assistant", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "beatrice.mensah@ucc.edu.gh", image: "assets/faculty/ms-beatrice-mensah.jpg",
-    bio: "Ms. Beatrice Mensah is the Principal Administrative Assistant in the Department General Office. She provides frontline administrative support, helps coordinate internal correspondence, and assists with student-facing office processes.",
-    specializations: ["Office Administration", "Student Services Support", "Correspondence Management"],
-    interests: ["Efficient Administration", "Process Organization", "Stakeholder Communication"],
+    bio: "Ms. Beatrice Mensah is the Principal Administrative Assistant in the Department General Office. She provides frontline administrative support, helps coordinate internal correspondence, assists with student-facing office processes, and maintains operational efficiency.",
+    specializations: ["Office Administration", "Student Services Support", "Correspondence Management", "Administrative Services", "Front Office Operations"],
+    interests: ["Efficient Administration", "Process Organization", "Stakeholder Communication", "Service Quality", "Team Collaboration"],
     profileUrl: ""
   },
   {
     id: 23, name: "Mr. Godfred Owusu Fordjour", title: "Head Messenger", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "godfred.owusu.fordjour@ucc.edu.gh", image: "",
-    bio: "Mr. Godfred Owusu Fordjour serves as Head Messenger for the Department General Office. He supports internal logistics, document circulation, and timely delivery of official departmental communications.",
-    specializations: ["Internal Logistics", "Document Circulation", "Office Support Services"],
-    interests: ["Operational Reliability", "Service Support", "Team Collaboration"],
+    bio: "Mr. Godfred Owusu Fordjour serves as Head Messenger for the Department General Office. He supports internal logistics, document circulation, timely delivery of official departmental communications, and maintains operational efficiency in facilitating departmental services.",
+    specializations: ["Internal Logistics", "Document Circulation", "Office Support Services", "Administrative Support", "Departmental Coordination"],
+    interests: ["Operational Reliability", "Service Support", "Team Collaboration", "Efficient Delivery", "Departmental Communications"],
     profileUrl: ""
   },
   {
     id: 24, name: "Head of Transport", title: "Head of Transport", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "", image: "",
-    bio: "Head of Transport manages the department's transportation logistics and services.",
-    specializations: ["Transport Logistics", "Operations Management"],
-    interests: ["Service Delivery", "Operational Excellence"],
+    bio: "Head of Transport manages the department's transportation logistics, vehicle operations, and ensures reliable mobility services for departmental activities and official engagements.",
+    specializations: ["Transport Logistics", "Operations Management", "Fleet Management", "Transportation Services", "Logistics Coordination"],
+    interests: ["Service Delivery", "Operational Excellence", "Efficient Transportation", "Logistics Optimization", "Operations Support"],
     profileUrl: ""
   },
   {
     id: 25, name: "Head Cleaner", title: "Head Cleaner", position: "Department General Office",
     rank: "Non-Teaching Staff", email: "", image: "",
-    bio: "Head Cleaner oversees the maintenance and cleanliness of departmental facilities and spaces.",
-    specializations: ["Facility Maintenance", "Cleanliness Management"],
-    interests: ["Clean Environment", "Facility Care", "Team Leadership"],
+    bio: "Head Cleaner oversees the maintenance and cleanliness of departmental facilities and spaces, ensuring a safe, hygienic, and welcoming environment for all faculty, staff, and students.",
+    specializations: ["Facility Maintenance", "Cleanliness Management", "Health and Safety Standards", "Environmental Services", "Facilities Supervision"],
+    interests: ["Clean Environment", "Facility Care", "Team Leadership", "Health and Hygiene", "Quality Assurance"],
     profileUrl: ""
   }
 ];
