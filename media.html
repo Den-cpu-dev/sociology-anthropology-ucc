@@ -84,57 +84,10 @@
           <p>Moments from student leadership, events, and community initiatives</p>
         </div>
         <div class="media-gallery grid-3">
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-001.jpg" alt="SOASA Activity 1" class="media-image">
-            <div class="media-caption">SOASA Event</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-002.jpg" alt="SOASA Activity 2" class="media-image">
-            <div class="media-caption">Student Leadership</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-003.jpg" alt="SOASA Activity 3" class="media-image">
-            <div class="media-caption">Community Engagement</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-004.jpg" alt="SOASA Activity 4" class="media-image">
-            <div class="media-caption">Members Gathering</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-005.jpg" alt="SOASA Activity 5" class="media-image">
-            <div class="media-caption">Executive Meeting</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-006.jpg" alt="SOASA Activity 6" class="media-image">
-            <div class="media-caption">Departmental Event</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-007.jpg" alt="SOASA Activity 7" class="media-image">
-            <div class="media-caption">Student Initiatives</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-008.jpg" alt="SOASA Activity 8" class="media-image">
-            <div class="media-caption">Networking Session</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-009.jpg" alt="SOASA Activity 9" class="media-image">
-            <div class="media-caption">Group Activity</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-010.jpg" alt="SOASA Activity 10" class="media-image">
-            <div class="media-caption">Celebration Event</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-011.jpg" alt="SOASA Activity 11" class="media-image">
-            <div class="media-caption">Member Engagement</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-012.jpg" alt="SOASA Activity 12" class="media-image">
-            <div class="media-caption">Team Building</div>
-          </div>
-          <div class="media-item">
-            <img src="assets/media/soasa/soasa-013.jpg" alt="SOASA Activity 13" class="media-image">
-            <div class="media-caption">Annual Gathering</div>
+          <div class="media-item gallery-trigger" data-gallery="soasa-event" style="cursor:pointer">
+            <img src="assets/media/soasa/soasa-001.jpg" alt="SOASA Activities - April 2026 Event" class="media-image">
+            <div class="media-caption">SOASA Activities - April 2026</div>
+            <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.7);color:#fff;padding:0.5rem 0.75rem;border-radius:4px;font-size:0.85rem;font-weight:600">13 Photos</div>
           </div>
         </div>
         <p class="text-center text-muted" style="margin-top:2rem;font-size:0.9rem">More photos coming soon. Contact us to contribute your SOASA event photos.</p>
@@ -329,5 +282,100 @@
 
   <script src="js/main.js"></script>
   <script src="js/courseData.js"></script>
+
+  <!-- Lightbox Gallery Modal -->
+  <div id="gallery-modal" class="gallery-modal">
+    <div class="gallery-modal-content">
+      <button class="gallery-close" onclick="closeGalleryModal()">&times;</button>
+      <button class="gallery-prev" onclick="prevGalleryImage()">&#10094;</button>
+      <img id="gallery-image" src="" alt="Gallery image" class="gallery-modal-image">
+      <button class="gallery-next" onclick="nextGalleryImage()">&#10095;</button>
+      <div class="gallery-counter">
+        <span id="image-number">1</span> / <span id="total-images">13</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentGallery = [];
+    let currentImageIndex = 0;
+
+    // SOASA Event Gallery - 13 images
+    const soasaEvent = [
+      { src: 'assets/media/soasa/soasa-001.jpg', alt: 'SOASA Event Photo 1' },
+      { src: 'assets/media/soasa/soasa-002.jpg', alt: 'SOASA Event Photo 2' },
+      { src: 'assets/media/soasa/soasa-003.jpg', alt: 'SOASA Event Photo 3' },
+      { src: 'assets/media/soasa/soasa-004.jpg', alt: 'SOASA Event Photo 4' },
+      { src: 'assets/media/soasa/soasa-005.jpg', alt: 'SOASA Event Photo 5' },
+      { src: 'assets/media/soasa/soasa-006.jpg', alt: 'SOASA Event Photo 6' },
+      { src: 'assets/media/soasa/soasa-007.jpg', alt: 'SOASA Event Photo 7' },
+      { src: 'assets/media/soasa/soasa-008.jpg', alt: 'SOASA Event Photo 8' },
+      { src: 'assets/media/soasa/soasa-009.jpg', alt: 'SOASA Event Photo 9' },
+      { src: 'assets/media/soasa/soasa-010.jpg', alt: 'SOASA Event Photo 10' },
+      { src: 'assets/media/soasa/soasa-011.jpg', alt: 'SOASA Event Photo 11' },
+      { src: 'assets/media/soasa/soasa-012.jpg', alt: 'SOASA Event Photo 12' },
+      { src: 'assets/media/soasa/soasa-013.jpg', alt: 'SOASA Event Photo 13' }
+    ];
+
+    // Gallery trigger click handler
+    document.querySelectorAll('.gallery-trigger').forEach(item => {
+      item.addEventListener('click', function() {
+        const galleryName = this.getAttribute('data-gallery');
+        if (galleryName === 'soasa-event') {
+          currentGallery = soasaEvent;
+        }
+        currentImageIndex = 0;
+        showGalleryModal();
+      });
+    });
+
+    function showGalleryModal() {
+      const modal = document.getElementById('gallery-modal');
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      updateGalleryImage();
+    }
+
+    function closeGalleryModal() {
+      const modal = document.getElementById('gallery-modal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function updateGalleryImage() {
+      const img = document.getElementById('gallery-image');
+      const counter = document.getElementById('image-number');
+      const total = document.getElementById('total-images');
+      img.src = currentGallery[currentImageIndex].src;
+      img.alt = currentGallery[currentImageIndex].alt;
+      counter.textContent = currentImageIndex + 1;
+      total.textContent = currentGallery.length;
+    }
+
+    function nextGalleryImage() {
+      currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+      updateGalleryImage();
+    }
+
+    function prevGalleryImage() {
+      currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
+      updateGalleryImage();
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('gallery-modal');
+      if (modal.style.display === 'block') {
+        if (e.key === 'ArrowRight') nextGalleryImage();
+        if (e.key === 'ArrowLeft') prevGalleryImage();
+        if (e.key === 'Escape') closeGalleryModal();
+      }
+    });
+
+    // Close modal on background click
+    document.getElementById('gallery-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeGalleryModal();
+    });
+  </script>
 </body>
 </html>
