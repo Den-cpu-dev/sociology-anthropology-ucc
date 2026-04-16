@@ -142,24 +142,11 @@
           <h2>Alumni Stories &amp; Reunions</h2>
           <p>Celebrating our graduates and alumni achievements</p>
         </div>
-        <div class="media-gallery grid-3">
-          <div class="media-item placeholder">
-            <div class="placeholder-image">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            </div>
-            <div class="media-caption">Alumni Reunion 2025</div>
-          </div>
-          <div class="media-item placeholder">
-            <div class="placeholder-image">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            </div>
-            <div class="media-caption">Alumni Achievement Feature</div>
-          </div>
-          <div class="media-item placeholder">
-            <div class="placeholder-image">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            </div>
-            <div class="media-caption">Class Gatherings</div>
+        <div class="media-gallery grid-1">
+          <div class="media-item gallery-trigger" data-gallery="alumni-homecoming" style="cursor:pointer">
+            <img src="assets/media/alumni/alumni-homecoming-001.jpg" alt="Alumni Homecoming, 2025" class="media-image">
+            <div class="media-caption">Alumni Homecoming Organized by the Department, 2025</div>
+            <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.7);color:#fff;padding:0.5rem 0.75rem;border-radius:4px;font-size:0.85rem;font-weight:600">2 Photos</div>
           </div>
         </div>
         <p class="text-center text-muted" style="margin-top:2rem;font-size:0.9rem">More photos coming soon. Contact us to contribute your alumni event photos.</p>
@@ -288,6 +275,12 @@
       { src: 'assets/media/soasa/soasa-013.jpg', alt: 'SOASA Event Photo 13' }
     ];
 
+    // Alumni Homecoming - 2 images
+    const alumniHomecoming = [
+      { src: 'assets/media/alumni/alumni-homecoming-001.jpg', alt: 'Alumni Homecoming Photo 1' },
+      { src: 'assets/media/alumni/alumni-homecoming-002.jpg', alt: 'Alumni Homecoming Photo 2' }
+    ];
+
     // Staff Retreat at Nyansapo - 2 images
     const staffRetreat = [
       { src: 'assets/media/faculty-staff/staff-retreat-001.jpg', alt: 'Staff Retreat Photo 1' },
@@ -391,6 +384,8 @@
           currentGallery = museumsTrip;
         } else if (galleryName === 'staff-retreat') {
           currentGallery = staffRetreat;
+        } else if (galleryName === 'alumni-homecoming') {
+          currentGallery = alumniHomecoming;
         }
         currentImageIndex = 0;
         showGalleryModal();
