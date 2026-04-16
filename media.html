@@ -186,11 +186,16 @@
           <h2>Student Life &amp; Academics</h2>
           <p>Classroom moments, fieldwork, and student achievements</p>
         </div>
-        <div class="media-gallery grid-1">
+        <div class="media-gallery grid-2">
           <div class="media-item gallery-trigger" data-gallery="parliament-trip" style="cursor:pointer">
             <img src="assets/media/student-life/parliament-trip-001.jpg" alt="Educational Trip to Parliament House and Kwame Nkrumah Memorial Park, 2026" class="media-image">
-            <div class="media-caption">L300 IR Students: Educational Trip to Parliament House & Kwame Nkrumah Memorial Park, 2026</div>
+            <div class="media-caption">L300 IR Students: Parliament House & Kwame Nkrumah Memorial Park, 2026</div>
             <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.7);color:#fff;padding:0.5rem 0.75rem;border-radius:4px;font-size:0.85rem;font-weight:600">32 Photos</div>
+          </div>
+          <div class="media-item gallery-trigger" data-gallery="museums-trip" style="cursor:pointer">
+            <img src="assets/media/student-life/museums-trip/museums-trip-001.jpg" alt="Visit to Ghana Museums and Monuments Board" class="media-image">
+            <div class="media-caption">L300 & L400 Students: Ghana Museums Board & Assin Manso, 2025</div>
+            <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.7);color:#fff;padding:0.5rem 0.75rem;border-radius:4px;font-size:0.85rem;font-weight:600">2 Photos</div>
           </div>
         </div>
         <p class="text-center text-muted" style="margin-top:2rem;font-size:0.9rem">More photos coming soon. Contact us to contribute your student life photos.</p>
@@ -332,6 +337,12 @@
       { src: 'assets/media/student-life/parliament-trip-032.jpg', alt: 'Parliament Trip Photo 32' }
     ];
 
+    // Ghana Museums and Monuments Board & Assin Manso Trip - 2 images
+    const museumsTrip = [
+      { src: 'assets/media/student-life/museums-trip/museums-trip-001.jpg', alt: 'Ghana Museums Board Photo 1' },
+      { src: 'assets/media/student-life/museums-trip/museums-trip-002.jpg', alt: 'Ghana Museums Board Photo 2' }
+    ];
+
     // Freshers Orientation Gallery - 8 images
     const freshersOrientation = [
       { src: 'assets/media/stakeholder/freshers/freshers-001.jpg', alt: 'Freshers Orientation Photo 1' },
@@ -383,6 +394,8 @@
           currentGallery = freshersOrientation;
         } else if (galleryName === 'parliament-trip') {
           currentGallery = parliamentTrip;
+        } else if (galleryName === 'museums-trip') {
+          currentGallery = museumsTrip;
         }
         currentImageIndex = 0;
         showGalleryModal();
