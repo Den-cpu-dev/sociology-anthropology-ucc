@@ -310,7 +310,7 @@ const facultyData = [
   },
   {
     id: 21, name: "Mrs. Rebecca Paintsil Quarm", title: "Chief Administrative Assistant", position: "Department General Office",
-    rank: "Non-Teaching Staff", email: "rebecca.quarm@ucc.edu.gh", image: "assets/faculty/mrs-rebecca-quarm.jpg",
+    rank: "Non-Teaching Staff", email: "rebecca.quarm@ucc.edu.gh", image: "assets/faculty/rebecca-paintsil-quarm.jpg",
     bio: "Mrs. Rebecca Paintsil Quarm is the Chief Administrative Assistant at the Department General Office. She supports day-to-day administrative coordination, documentation workflows, and communication across teaching, research, and student services.",
     specializations: ["Administrative Coordination", "Records Management", "Department Operations", "Document Management", "Office Leadership"],
     interests: ["Service Delivery", "Workflow Improvement", "Student and Staff Support", "Operations Management", "Administrative Excellence"],
