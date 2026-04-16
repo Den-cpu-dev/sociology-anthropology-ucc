@@ -326,16 +326,16 @@ const facultyData = [
   },
   {
     id: 23, name: "Mr. Godfred Owusu Fordjour", title: "Head Messenger", position: "Department General Office",
-    rank: "Non-Teaching Staff", email: "godfred.owusu.fordjour@ucc.edu.gh", image: "",
+    rank: "Non-Teaching Staff", email: "godfred.owusu.fordjour@ucc.edu.gh", image: "assets/faculty/godfred-owusu-fordjour.jpg",
     bio: "Mr. Godfred Owusu Fordjour serves as Head Messenger for the Department General Office. He supports internal logistics, document circulation, timely delivery of official departmental communications, and maintains operational efficiency in facilitating departmental services.",
     specializations: ["Internal Logistics", "Document Circulation", "Office Support Services", "Administrative Support", "Departmental Coordination"],
     interests: ["Operational Reliability", "Service Support", "Team Collaboration", "Efficient Delivery", "Departmental Communications"],
     profileUrl: ""
   },
   {
-    id: 24, name: "Head of Transport", title: "Head of Transport", position: "Department General Office",
-    rank: "Non-Teaching Staff", email: "", image: "",
-    bio: "Head of Transport manages the department's transportation logistics, vehicle operations, and ensures reliable mobility services for departmental activities and official engagements.",
+    id: 24, name: "Mr. Edward Amoah", title: "Head of Transport", position: "Department General Office",
+    rank: "Non-Teaching Staff", email: "", image: "assets/faculty/edward-amoah.jpg",
+    bio: "Mr. Edward Amoah manages the department's transportation logistics, vehicle operations, and ensures reliable mobility services for departmental activities and official engagements.",
     specializations: ["Transport Logistics", "Operations Management", "Fleet Management", "Transportation Services", "Logistics Coordination"],
     interests: ["Service Delivery", "Operational Excellence", "Efficient Transportation", "Logistics Optimization", "Operations Support"],
     profileUrl: ""
