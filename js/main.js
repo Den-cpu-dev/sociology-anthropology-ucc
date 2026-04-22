@@ -869,43 +869,39 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!form) return;
   var status = document.getElementById('contactFormStatus');
 
-  function encodeFormData(data) {
-    return Array.from(data.entries()).map(function (entry) {
-      return encodeURIComponent(entry[0]) + '=' + encodeURIComponent(entry[1]);
-    }).join('&');
-  }
-
-  form.addEventListener('submit', async function (e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     var btn = form.querySelector('button[type="submit"]');
     var origText = btn.innerHTML;
-    btn.innerHTML = 'Sending...';
+    btn.innerHTML = 'Opening Email...';
     btn.disabled = true;
-    if (status) status.textContent = 'Sending your message...';
+    if (status) status.textContent = 'Opening your email app...';
 
-    try {
-      var response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encodeFormData(new FormData(form))
-      });
+    var name = (form.querySelector('#name') || {}).value || '';
+    var email = (form.querySelector('#email') || {}).value || '';
+    var subject = (form.querySelector('#subject') || {}).value || '';
+    var message = (form.querySelector('#message') || {}).value || '';
+    var departmentEmail = 'sociology.anthropology@ucc.edu.gh';
 
-      if (!response.ok) {
-        throw new Error('Form submission failed');
-      }
+    var mailSubject = subject ? subject : 'Website Contact Message';
+    var mailBody = [
+      'Name: ' + name,
+      'Email: ' + email,
+      '',
+      'Message:',
+      message
+    ].join('\n');
 
-      btn.innerHTML = origText;
-      btn.disabled = false;
-      form.reset();
-      if (status) status.textContent = 'Message sent successfully. We\'ll get back to you soon.';
-      showToast('Message Sent!', 'Thank you for your message. We\'ll get back to you soon.');
-    } catch (error) {
-      btn.innerHTML = origText;
-      btn.disabled = false;
-      if (status) status.textContent = 'Sorry, your message could not be sent right now. Please try again or email the department directly.';
-      showToast('Message Not Sent', 'Please try again in a moment, or contact the department by email.');
-    }
+    var mailtoUrl = 'mailto:' + departmentEmail
+      + '?subject=' + encodeURIComponent(mailSubject)
+      + '&body=' + encodeURIComponent(mailBody);
+
+    window.location.href = mailtoUrl;
+
+    btn.innerHTML = origText;
+    btn.disabled = false;
+    if (status) status.textContent = 'Your email app should open now with this message addressed to the department.';
   });
 });
 
