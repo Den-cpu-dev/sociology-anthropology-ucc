@@ -847,6 +847,18 @@ function closeCourseModal() {
   }
 }
 
+function closeFlyerModal() {
+  var modal = document.getElementById('flyerModal');
+  var image = document.getElementById('flyerModalImage');
+  if (modal) {
+    modal.classList.remove('open');
+  }
+  if (image) {
+    image.src = '';
+  }
+  document.body.style.overflow = '';
+}
+
 // Close modals on outside click or Escape
 document.addEventListener('click', function (e) {
   if (e.target.classList.contains('modal-overlay')) {
@@ -865,6 +877,25 @@ document.addEventListener('keydown', function (e) {
 
 // ==================== CONTACT FORM ====================
 document.addEventListener('DOMContentLoaded', function () {
+  var flyerModal = document.getElementById('flyerModal');
+  var flyerModalImage = document.getElementById('flyerModalImage');
+  var flyerButtons = document.querySelectorAll('.view-flyer');
+
+  if (flyerModal && flyerModalImage && flyerButtons.length) {
+    flyerButtons.forEach(function (button) {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        var flyerSrc = button.getAttribute('data-flyer-src');
+        var flyerTitle = button.getAttribute('data-flyer-title') || 'Flyer preview';
+        if (!flyerSrc) return;
+        flyerModalImage.src = flyerSrc;
+        flyerModalImage.alt = flyerTitle;
+        flyerModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  }
+
   var form = document.getElementById('contactForm');
   if (!form) return;
   var status = document.getElementById('contactFormStatus');
