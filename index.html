@@ -136,6 +136,51 @@
       </div>
     </section>
 
+    <!-- Upcoming Program Flyers -->
+    <section class="section-padding section-alt" id="upcoming-flyers">
+      <div class="container">
+        <div class="section-header">
+          <h2>Upcoming Program Flyers</h2>
+          <p>View and download the latest flyers for upcoming department activities and opportunities.</p>
+        </div>
+        <div class="grid-2 flyers-grid">
+          <article class="card flyer-card">
+            <div class="flyer-image-wrap">
+              <img loading="lazy" src="assets/flyers/upcoming-program-1.jpeg" alt="Upcoming program flyer 1" class="flyer-image">
+            </div>
+            <div class="card-body">
+              <h3>Program Flyer 1</h3>
+              <div class="btn-group flyer-actions">
+                <a href="assets/flyers/upcoming-program-1.jpeg" class="btn btn-primary view-flyer" data-flyer-src="assets/flyers/upcoming-program-1.jpeg" data-flyer-title="Program Flyer 1">View Flyer</a>
+                <a href="assets/flyers/upcoming-program-1.jpeg" class="btn btn-outline" download>Download</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card flyer-card">
+            <div class="flyer-image-wrap">
+              <img loading="lazy" src="assets/flyers/upcoming-program-2.jpeg" alt="Upcoming program flyer 2" class="flyer-image">
+            </div>
+            <div class="card-body">
+              <h3>Program Flyer 2</h3>
+              <div class="btn-group flyer-actions">
+                <a href="assets/flyers/upcoming-program-2.jpeg" class="btn btn-primary view-flyer" data-flyer-src="assets/flyers/upcoming-program-2.jpeg" data-flyer-title="Program Flyer 2">View Flyer</a>
+                <a href="assets/flyers/upcoming-program-2.jpeg" class="btn btn-outline" download>Download</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flyer View Modal -->
+    <div id="flyerModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Flyer preview">
+      <div class="modal modal-lg flyer-modal">
+        <button class="modal-close" type="button" onclick="closeFlyerModal()" aria-label="Close flyer preview">✕</button>
+        <img id="flyerModalImage" src="" alt="Flyer preview" class="flyer-modal-image">
+      </div>
+    </div>
+
     <!-- HoD Welcome Section -->
     <section class="section-padding">
       <div class="container">
