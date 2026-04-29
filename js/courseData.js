@@ -1855,6 +1855,25 @@ const courseData = {
     ]
   },
 
+  "ANT310": {
+    name: "Anthropology of Business", credits: "3",
+    lecturer: "Prof. John Windie Ansah",
+    description: "This course examines the cultural, social and institutional dimensions of economic life and business practices. Using ethnographic case studies from Ghana and other contexts, students analyse how kinship, religion, gender, social networks, informal institutions and cultural values shape entrepreneurship, markets, firm behaviour, consumption and corporate practices. The course pays special attention to family businesses, informal economies, corporate social responsibility, and the anthropology of markets and finance.",
+    objectives: [
+      "Introduce students to anthropological approaches to the study of business and economic life.",
+      "Analyse how culture, kinship and social networks influence entrepreneurship and firm organisation.",
+      "Examine the role of informal markets, financial practices and consumption in everyday economic life.",
+      "Apply ethnographic methods to investigate business practices and develop culturally informed policy recommendations."
+    ],
+    readings: [
+      "Geertz, C. (1978). The Bazaar Economy: Market culture and local commerce. (Selections).",
+      "Granovetter, M. (1985). Economic action and social structure: The problem of embeddedness. American Journal of Sociology.",
+      "Hart, K. (2001). Money in an Unequal World: Anthropological perspectives on finance and markets.",
+      "Maurer, B. (2006). Anthropology and Money: Financial practices and informal economies.",
+      "Anecdotal case studies and recent articles on entrepreneurship, family business and CSR in West Africa (provided as course pack)."
+    ]
+  },
+
   "ANT307": {
     name: "Family and Kinship", credits: "3",
     lecturer: "Prof. Daniel Favieh",
