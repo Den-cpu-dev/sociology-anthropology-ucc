@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Electoral Commissioner | SOASA Elections</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/electoral-dashboard.css" />
+        <link rel="icon" type="image/jpeg" href="assets/soasa-emblem.jpg" />
+        <style>
+            body {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body class="loaded">
+        <div class="top-bar">
+            <div class="container">
+                <span class="campus-label">SOASA · Electoral Commissioner</span>
+                <div class="top-bar-right">
+                    <a href="soasa.html">SOASA</a>
+                    <span class="top-bar-divider">|</span>
+                    <a href="vote.html">Voting page</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="section-padding" id="main-content">
+            <div class="container" style="max-width: 1100px">
+                <h1>Electoral Commissioner Dashboard</h1>
+                <p style="color: var(--muted-fg); margin: 0.75rem 0 1.5rem">
+                    Live statistics, automatic winner declaration, and candidate
+                    registration. Keep this URL and key confidential.
+                </p>
+
+                <!-- Auth -->
+                <div id="ecAuth" class="card ec-auth">
+                    <div class="card-body">
+                        <h2 id="ecAuthTitle">Commissioner sign in</h2>
+                        <p
+                            id="ecAuthHint"
+                            style="
+                                font-size: 0.9rem;
+                                color: var(--muted-fg);
+                                margin: 0.75rem 0 1rem;
+                            "
+                        >
+                            Enter your Electoral Commissioner password to open
+                            the dashboard.
+                        </p>
+                        <div class="form-group">
+                            <label for="ecAdminKey" id="ecAuthLabel"
+                                >Password</label
+                            >
+                            <input
+                                type="password"
+                                id="ecAdminKey"
+                                autocomplete="current-password"
+                            />
+                        </div>
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="ecUnlockBtn"
+                        >
+                            Unlock dashboard
+                        </button>
+                    </div>
+                </div>
+
+                <div id="ecApp" class="vote-hidden">
+                    <div class="ec-tabs" role="tablist">
+                        <button
+                            type="button"
+                            class="ec-tab active"
+                            data-tab="dashboard"
+                        >
+                            Dashboard &amp; winners
+                        </button>
+                        <button
+                            type="button"
+                            class="ec-tab"
+                            data-tab="candidates"
+                        >
+                            Candidates
+                        </button>
+                        <button type="button" class="ec-tab" data-tab="voters">
+                            Voter roll
+                        </button>
+                        <button
+                            type="button"
+                            class="ec-tab"
+                            data-tab="settings"
+                        >
+                            Settings
+                        </button>
+                    </div>
+
+                    <!-- Dashboard -->
+                    <section id="panel-dashboard" class="ec-panel active">
+                        <div
+                            style="
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 0.75rem;
+                                align-items: center;
+                                margin-bottom: 1rem;
+                            "
+                        >
+                            <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                                id="ecRefreshDashboard"
+                            >
+                                Refresh
+                            </button>
+                            <span
+                                id="ecLastUpdated"
+                                style="
+                                    font-size: 0.85rem;
+                                    color: var(--muted-fg);
+                                "
+                            ></span>
+                        </div>
+                        <div id="ecStats" class="ec-stats"></div>
+                        <div class="form-group">
+                            <label>Turnout</label>
+                            <div class="ec-progress">
+                                <div
+                                    class="ec-progress-bar"
+                                    id="ecTurnoutBar"
+                                    style="width: 0%"
+                                ></div>
+                            </div>
+                        </div>
+                        <h2 style="margin: 1.5rem 0 1rem">Declared winners</h2>
+                        <p
+                            style="
+                                color: var(--muted-fg);
+                                font-size: 0.9rem;
+                                margin-bottom: 1rem;
+                            "
+                        >
+                            Winners are declared automatically as the candidate
+                            with the highest votes per office. Ties must be
+                            resolved by the Electoral Commissioner.
+                        </p>
+                        <div id="ecWinnerGrid" class="ec-winner-grid"></div>
+                        <h2 style="margin: 2rem 0 1rem">
+                            Detailed results by office
+                        </h2>
+                        <div id="ecDetailedResults"></div>
+                    </section>
+
+                    <!-- Candidates -->
+                    <section id="panel-candidates" class="ec-panel">
+                        <div class="card">
+                            <div class="card-body ec-candidate-form">
+                                <h2>Add candidate</h2>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        color: var(--muted-fg);
+                                        margin-bottom: 1rem;
+                                    "
+                                >
+                                    For President &amp; Vice President, enter
+                                    both names in one field (e.g.
+                                    <em>Jane Doe &amp; Kwame Asante</em>).
+                                </p>
+                                <form id="ecCandidateForm">
+                                    <div class="form-group">
+                                        <label for="ecCandPosition"
+                                            >Position *</label
+                                        >
+                                        <select
+                                            id="ecCandPosition"
+                                            name="position_id"
+                                            required
+                                        ></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ecCandName"
+                                            >Candidate name (or ticket) *</label
+                                        >
+                                        <input
+                                            type="text"
+                                            id="ecCandName"
+                                            name="full_name"
+                                            required
+                                            placeholder="Full name or President & Vice President ticket"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ecCandPhoto">Photo</label>
+                                        <input
+                                            type="file"
+                                            id="ecCandPhoto"
+                                            accept="image/jpeg,image/png,image/webp"
+                                        />
+                                        <img
+                                            id="ecPhotoPreview"
+                                            class="ec-photo-preview vote-hidden"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ecCandManifesto"
+                                            >Manifesto link (optional)</label
+                                        >
+                                        <input
+                                            type="url"
+                                            id="ecCandManifesto"
+                                            name="manifesto_url"
+                                            placeholder="https://"
+                                        />
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary"
+                                    >
+                                        Save candidate
+                                    </button>
+                                    <span
+                                        id="ecCandFormStatus"
+                                        style="
+                                            margin-left: 0.75rem;
+                                            font-size: 0.9rem;
+                                        "
+                                    ></span>
+                                </form>
+                            </div>
+                        </div>
+                        <h3 style="margin: 1.5rem 0 0.75rem">
+                            Registered candidates
+                        </h3>
+                        <div
+                            id="ecCandidateList"
+                            class="ec-candidate-list"
+                        ></div>
+                    </section>
+
+                    <!-- Voters -->
+                    <section id="panel-voters" class="ec-panel">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>Import voter roll</h2>
+                                <p
+                                    style="
+                                        font-size: 0.9rem;
+                                        color: var(--muted-fg);
+                                    "
+                                >
+                                    CSV:
+                                    <code
+                                        >index_number,full_name,level,password</code
+                                    >
+                                </p>
+                                <label style="display: block; margin: 0.75rem 0"
+                                    ><input
+                                        type="checkbox"
+                                        id="ecReplaceStudents"
+                                    />
+                                    Replace entire roll (only before voting
+                                    starts)</label
+                                >
+                                <div class="form-group">
+                                    <textarea
+                                        id="ecStudentsCsv"
+                                        rows="6"
+                                        style="
+                                            width: 100%;
+                                            font-family: monospace;
+                                            font-size: 0.85rem;
+                                        "
+                                    ></textarea>
+                                </div>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    id="ecImportStudents"
+                                >
+                                    Import students
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Settings -->
+                    <section id="panel-settings" class="ec-panel">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>Election schedule</h2>
+                                <div class="form-group">
+                                    <label for="ecCfgTitle"
+                                        >Election title</label
+                                    >
+                                    <input type="text" id="ecCfgTitle" />
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="ecCfgOpens">Opens</label>
+                                        <input
+                                            type="datetime-local"
+                                            id="ecCfgOpens"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ecCfgCloses">Closes</label>
+                                        <input
+                                            type="datetime-local"
+                                            id="ecCfgCloses"
+                                        />
+                                    </div>
+                                </div>
+                                <label
+                                    style="
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 0.5rem;
+                                        margin: 1rem 0;
+                                    "
+                                >
+                                    <input
+                                        type="checkbox"
+                                        id="ecCfgPublished"
+                                    />
+                                    Publish results on public site
+                                </label>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    id="ecSaveConfig"
+                                >
+                                    Save settings
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-bottom">
+                <div class="container text-center">
+                    &copy; 2026 SOASA Electoral Commission
+                </div>
+            </div>
+        </footer>
+        <script src="js/electoral-commissioner.js"></script>
+    </body>
+</html>

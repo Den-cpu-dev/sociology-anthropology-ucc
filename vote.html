@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SOASA Executive Elections | Vote</title>
+        <meta
+            name="description"
+            content="Cast your vote for SOASA executive officers. Sign in with your index number."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/vote.css" />
+        <link rel="icon" type="image/jpeg" href="assets/soasa-emblem.jpg" />
+        <noscript
+            ><style>
+                body {
+                    opacity: 1 !important;
+                }
+            </style></noscript
+        >
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <div class="top-bar">
+            <div class="container">
+                <span class="campus-label"
+                    >University of Cape Coast · SOASA Elections</span
+                >
+                <div class="top-bar-right">
+                    <a href="soasa.html">Back to SOASA</a>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <a href="soasa.html" class="navbar-brand">
+                        <img src="assets/soasa-emblem.jpg" alt="SOASA Emblem" />
+                        <div class="navbar-brand-text">
+                            <span class="brand-title">SOASA ELECTIONS</span>
+                            <span class="brand-sub">Secure ballot</span>
+                        </div>
+                    </a>
+                    <div class="nav-links">
+                        <a href="soasa.html">SOASA</a>
+                        <button
+                            type="button"
+                            class="btn btn-ghost vote-hidden"
+                            id="logoutBtn"
+                        >
+                            Sign out
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" id="main-content">
+            <section class="page-hero">
+                <div class="container">
+                    <h1 id="electionTitle">SOASA Executive Elections</h1>
+                    <p>
+                        Sign in with your index number and voting password. Your
+                        name will appear after login so you can confirm you are
+                        on the correct voter roll.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-padding">
+                <div class="container vote-wrap">
+                    <div
+                        id="voteAlert"
+                        class="vote-alert vote-hidden"
+                        role="alert"
+                    ></div>
+
+                    <!-- Login -->
+                    <div id="loginPanel" class="vote-card">
+                        <h2 class="mb-1">Student sign in</h2>
+                        <p
+                            class="text-muted mb-2"
+                            style="
+                                color: var(--muted-fg);
+                                font-size: 0.95rem;
+                                margin-bottom: 1.25rem;
+                            "
+                        >
+                            Use the index number and password provided by the
+                            electoral committee. Passwords are set when your
+                            class list is uploaded.
+                        </p>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="index_number">Index number</label>
+                                <input
+                                    type="text"
+                                    id="index_number"
+                                    name="index_number"
+                                    required
+                                    autocomplete="off"
+                                    placeholder="e.g. SS/BSS/25/0001"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Voting password</label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    required
+                                    autocomplete="off"
+                                />
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Sign in to vote
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Ballot -->
+                    <div id="ballotPanel" class="vote-hidden">
+                        <div id="voteWelcome" class="vote-welcome vote-hidden">
+                            <div>
+                                Welcome, <strong id="welcomeName"></strong>
+                            </div>
+                            <div class="vote-meta" id="welcomeMeta"></div>
+                        </div>
+                        <form id="ballotForm" class="vote-card">
+                            <p
+                                style="
+                                    margin-bottom: 1.25rem;
+                                    color: var(--muted-fg);
+                                "
+                            >
+                                President and Vice President are voted as
+                                <strong>one ticket</strong> (one choice for the
+                                pair). For other offices, pick one candidate or
+                                <strong>Abstain</strong>. You cannot change your
+                                vote after submitting.
+                            </p>
+                            <div id="ballotPositions"></div>
+                            <div class="vote-actions">
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-lg"
+                                >
+                                    Review &amp; submit ballot
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Already voted / success -->
+                    <div
+                        id="donePanel"
+                        class="vote-card vote-hidden text-center"
+                    >
+                        <h2>Thank you</h2>
+                        <p style="color: var(--muted-fg); margin: 1rem 0">
+                            Your ballot has been recorded. You may close this
+                            page or sign out if using a shared device.
+                        </p>
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="logoutBtnDone"
+                            onclick="
+                                document.getElementById('logoutBtn').click()
+                            "
+                        >
+                            Sign out
+                        </button>
+                    </div>
+
+                    <!-- Closed / not open -->
+                    <div
+                        id="closedPanel"
+                        class="vote-card vote-hidden text-center"
+                    >
+                        <h2>Voting unavailable</h2>
+                        <p style="color: var(--muted-fg); margin-top: 1rem">
+                            The ballot is not open right now. Check back during
+                            the published voting window or contact the electoral
+                            commissioner.
+                        </p>
+                        <p style="margin-top: 1.5rem">
+                            <a href="soasa.html" class="btn btn-secondary"
+                                >Return to SOASA</a
+                            >
+                        </p>
+                    </div>
+
+                    <p
+                        class="vote-turnout"
+                        id="voteTurnout"
+                        aria-live="polite"
+                    ></p>
+                </div>
+            </section>
+        </main>
+
+        <div
+            id="confirmOverlay"
+            class="vote-confirm-overlay vote-hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="confirmTitle"
+        >
+            <div class="vote-confirm-box">
+                <h3 id="confirmTitle">Confirm your ballot</h3>
+                <p
+                    style="
+                        font-size: 0.9rem;
+                        color: var(--muted-fg);
+                        margin-bottom: 0.75rem;
+                    "
+                >
+                    This cannot be undone.
+                </p>
+                <ul class="vote-confirm-list" id="confirmList"></ul>
+                <div class="vote-actions">
+                    <button
+                        type="button"
+                        class="btn btn-ghost"
+                        id="confirmCancel"
+                    >
+                        Go back
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="confirmSubmit"
+                    >
+                        Submit vote
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer-bottom">
+                <div class="container text-center">
+                    &copy; 2026 SOASA · Sociology &amp; Anthropology Students
+                    Association, UCC
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+        <script src="js/vote.js"></script>
+    </body>
+</html>

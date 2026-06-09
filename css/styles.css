@@ -546,6 +546,9 @@ tr.course-item:active{transform:none}
 .exec-card{background:var(--card);border:1px solid var(--border);border-radius:calc(var(--radius) * 1.5);overflow:hidden;transition:box-shadow .3s ease,transform .3s cubic-bezier(.22,1,.36,1)}
 .exec-card:hover{box-shadow:0 12px 28px rgba(0,0,0,.1);transform:translateY(-4px)}
 .exec-role{font-size:.8rem;color:var(--primary);font-weight:600;margin-top:.15rem}
+a.exec-card-ec-portal{display:block;text-decoration:none;color:inherit;cursor:pointer}
+a.exec-card-ec-portal:hover{box-shadow:0 12px 28px rgba(61,90,30,.15);border-color:var(--primary-light)}
+a.exec-card-ec-portal:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 /* ===================== SCHOLARSHIP ADDITIONS ===================== */
 .scholarship-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem}

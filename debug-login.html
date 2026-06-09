@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOASA Login Debug Tool</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { padding: 2rem; max-width: 800px; margin: 0 auto; font-family: system-ui; }
+    .debug-section { background: #f5f5f5; padding: 1.5rem; margin: 1rem 0; border-radius: 8px; border-left: 4px solid #3d5a1e; }
+    .debug-section h3 { margin-top: 0; color: #3d5a1e; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+    .form-group input { width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+    .btn { padding: 0.75rem 1.5rem; background: #3d5a1e; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+    .btn:hover { background: #2d4516; }
+    .result { margin-top: 1rem; padding: 1rem; border-radius: 4px; white-space: pre-wrap; font-family: monospace; font-size: 0.9rem; }
+    .result.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+    .result.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    .result.info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+  </style>
+</head>
+<body>
+  <h1>🔍 SOASA Login Debug Tool</h1>
+  <p>This tool helps diagnose login issues. Open your browser's Developer Console (F12) for detailed logs.</p>
+
+  <div class="debug-section">
+    <h3>Step 1: Check Backend Connection</h3>
+    <button class="btn" onclick="testBackend()">Test Backend API</button>
+    <div id="backendResult"></div>
+  </div>
+
+  <div class="debug-section">
+    <h3>Step 2: Check Election Status</h3>
+    <button class="btn" onclick="testElection()">Check Election Config</button>
+    <div id="electionResult"></div>
+  </div>
+
+  <div class="debug-section">
+    <h3>Step 3: Test Student Login</h3>
+    <form id="testLoginForm" onsubmit="testLogin(event)">
+      <div class="form-group">
+        <label>Index Number</label>
+        <input type="text" id="testIndex" placeholder="e.g. SS/BSS/25/0001" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="testPassword" placeholder="e.g. Soasa2026!" required>
+      </div>
+      <button type="submit" class="btn">Test Login</button>
+    </form>
+    <div id="loginResult"></div>
+  </div>
+
+  <div class="debug-section">
+    <h3>Step 4: Check Normalized Index</h3>
+    <p>The system normalizes index numbers (removes spaces, makes uppercase). Check what your input becomes:</p>
+    <div class="form-group">
+      <label>Enter Index Number</label>
+      <input type="text" id="normalizeTest" placeholder="Type here..." oninput="showNormalized()">
+    </div>
+    <div id="normalizeResult"></div>
+  </div>
+
+  <script>
+    function showResult(id, message, type) {
+      const el = document.getElementById(id);
+      el.className = 'result ' + type;
+      el.textContent = message;
+    }
+
+    async function testBackend() {
+      showResult('backendResult', 'Testing...', 'info');
+      try {
+        const res = await fetch('/api/election/status');
+        const data = await res.json();
+        if (res.ok) {
+          showResult('backendResult',
+            '✅ Backend is working!\n\n' +
+            'Response: ' + JSON.stringify(data, null, 2),
+            'success'
+          );
+        } else {
+          showResult('backendResult',
+            '❌ Backend error:\n\n' + JSON.stringify(data, null, 2),
+            'error'
+          );
+        }
+      } catch (err) {
+        showResult('backendResult',
+          '❌ Cannot reach backend:\n\n' + err.message +
+          '\n\nMake sure:\n1. Backend is deployed on Vercel\n2. You\'re accessing via the correct URL\n3. Environment variables are set',
+          'error'
+        );
+      }
+    }
+
+    async function testElection() {
+      showResult('electionResult', 'Checking...', 'info');
+      try {
+        const res = await fetch('/api/election/status');
+        const data = await res.json();
+        if (res.ok) {
+          const msg = '✅ Election Configuration:\n\n' +
+            'Status: ' + data.status + '\n' +
+            'Opens: ' + (data.opensAt || 'Not set') + '\n' +
+            'Closes: ' + (data.closesAt || 'Not set') + '\n' +
+            'Turnout: ' + (data.turnout ? data.turnout.voted + '/' + data.turnout.eligible : 'No data');
+          showResult('electionResult', msg, 'success');
+        } else {
+          showResult('electionResult', '❌ Error: ' + JSON.stringify(data, null, 2), 'error');
+        }
+      } catch (err) {
+        showResult('electionResult', '❌ Error: ' + err.message, 'error');
+      }
+    }
+
+    async function testLogin(e) {
+      e.preventDefault();
+      const index = document.getElementById('testIndex').value;
+      const password = document.getElementById('testPassword').value;
+
+      showResult('loginResult', 'Attempting login...', 'info');
+      console.log('Login test - Index:', index);
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ index_number: index, password: password })
+        });
+
+        const data = await res.json();
+        console.log('Login response:', res.status, data);
+
+        if (res.ok) {
+          showResult('loginResult',
+            '✅ LOGIN SUCCESSFUL!\n\n' +
+            'Student: ' + data.student.full_name + '\n' +
+            'Index: ' + data.student.index_number + '\n' +
+            'Level: ' + data.student.level + '\n' +
+            'Has voted: ' + (data.student.has_voted ? 'Yes' : 'No'),
+            'success'
+          );
+        } else {
+          let errorMsg = '❌ LOGIN FAILED\n\n';
+          errorMsg += 'Error: ' + data.error + '\n\n';
+
+          if (data.error === 'invalid_credentials') {
+            errorMsg += 'Possible reasons:\n';
+            errorMsg += '1. Index number not in database\n';
+            errorMsg += '2. Password is incorrect\n';
+            errorMsg += '3. Index format doesn\'t match database\n\n';
+            errorMsg += 'Normalized index sent: ' + normalizeIndex(index) + '\n';
+            errorMsg += 'Make sure this matches what\'s in your database exactly.';
+          } else if (data.error === 'missing_credentials') {
+            errorMsg += 'Both index number and password are required.';
+          }
+
+          showResult('loginResult', errorMsg, 'error');
+        }
+      } catch (err) {
+        showResult('loginResult', '❌ Network error:\n\n' + err.message, 'error');
+      }
+    }
+
+    function normalizeIndex(value) {
+      return String(value || '')
+        .trim()
+        .toUpperCase()
+        .replace(/\s+/g, '');
+    }
+
+    function showNormalized() {
+      const input = document.getElementById('normalizeTest').value;
+      const normalized = normalizeIndex(input);
+      const el = document.getElementById('normalizeResult');
+
+      if (input) {
+        el.className = 'result info';
+        el.textContent =
+          'Your input: ' + input + '\n' +
+          'Normalized: ' + normalized + '\n\n' +
+          'This normalized version is what gets sent to the database.\n' +
+          'Make sure your database has this EXACT format.';
+      } else {
+        el.textContent = '';
+      }
+    }
+  </script>
+</body>
+</html>
