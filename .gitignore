@@ -6,4 +6,8 @@ node_modules/
 
 # Large PDF files (too big for GitHub)
 data/*.pdf
-scratch_l*/*.pdf
+
+# Scratch working directories (PDF extraction temp files)
+scratch_l100/
+scratch_l200/
+scratch_l*/
