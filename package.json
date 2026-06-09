@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vercel dev",
+    "build": "echo 'No build step required'",
     "hash-password": "node scripts/hash-password.js"
   },
   "dependencies": {
