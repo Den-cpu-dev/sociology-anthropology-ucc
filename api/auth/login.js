@@ -3,10 +3,9 @@ import {
   createSessionToken,
   setSessionCookie,
   verifyPassword,
-  normalizeIndex,
 } from '../../lib/auth.js';
 import { getElectionConfig, getElectionStatus } from '../../lib/election.js';
-import { json, readJson, methodNotAllowed } from '../../lib/http.js';
+import { json, readJson, methodNotAllowed, normalizeIndex } from '../../lib/http.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return methodNotAllowed(res, ['POST']);

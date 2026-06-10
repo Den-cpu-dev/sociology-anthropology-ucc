@@ -1,6 +1,6 @@
 import { getSupabase } from '../../lib/db.js';
-import { hashPassword, normalizeIndex } from '../../lib/auth.js';
-import { json, readJson, methodNotAllowed, requireAdmin } from '../../lib/http.js';
+import { hashPassword } from '../../lib/auth.js';
+import { json, readJson, methodNotAllowed, requireAdmin, normalizeIndex } from '../../lib/http.js';
 
 function parseCsv(text) {
   const lines = text.trim().split(/\r?\n/).filter(Boolean);

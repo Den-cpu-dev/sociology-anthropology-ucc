@@ -1,4 +1,8 @@
 {
+  "buildCommand": "echo 'Static site — no build needed'",
+  "installCommand": "npm install",
+  "framework": null,
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" }
   ],
