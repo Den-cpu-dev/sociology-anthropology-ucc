@@ -1,6 +1,17 @@
 {
   "outputDirectory": ".",
   "rewrites": [
+    { "source": "/api/admin/candidate", "destination": "/api/admin.js?endpoint=candidate" },
+    { "source": "/api/admin/candidates", "destination": "/api/admin.js?endpoint=candidates" },
+    { "source": "/api/admin/dashboard", "destination": "/api/admin.js?endpoint=dashboard" },
+    { "source": "/api/admin/election-config", "destination": "/api/admin.js?endpoint=election-config" },
+    { "source": "/api/admin/import-candidates", "destination": "/api/admin.js?endpoint=import-candidates" },
+    { "source": "/api/admin/import-students", "destination": "/api/admin.js?endpoint=import-students" },
+    { "source": "/api/admin/positions", "destination": "/api/admin.js?endpoint=positions" },
+    { "source": "/api/admin/results", "destination": "/api/admin.js?endpoint=results" },
+    { "source": "/api/auth/login", "destination": "/api/auth.js?endpoint=login" },
+    { "source": "/api/auth/logout", "destination": "/api/auth.js?endpoint=logout" },
+    { "source": "/api/auth/me", "destination": "/api/auth.js?endpoint=me" },
     { "source": "/api/(.*)", "destination": "/api/$1" }
   ],
   "headers": [
