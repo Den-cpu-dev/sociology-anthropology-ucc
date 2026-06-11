@@ -126,6 +126,6 @@ export default async function handler(req, res) {
     }
   } catch (err) {
     console.error(`auth error [${endpoint}]`, err);
-    return json(res, 500, { error: 'server_error', message: err.message });
+    return json(res, 500, { error: 'server_error' });
   }
 }
