@@ -34,6 +34,6 @@ export default async function handler(req, res) {
     });
   } catch (err) {
     console.error('status error', err);
-    return json(res, 500, { error: 'server_error' });
+    return json(res, 500, { error: 'server_error', message: err.message });
   }
 }
