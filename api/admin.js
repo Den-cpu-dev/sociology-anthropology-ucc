@@ -472,7 +472,19 @@ export default async function handler(req, res) {
   const admin = requireAdmin(req);
   if (!admin.ok) return json(res, admin.status, { error: admin.error });
 
-  const endpoint = req.query?.endpoint;
+  let endpoint = req.query?.endpoint;
+  if (!endpoint && req.url) {
+    try {
+      const urlObj = new URL(req.url, 'http://localhost');
+      endpoint = urlObj.searchParams.get('endpoint');
+      if (!endpoint) {
+        const parts = urlObj.pathname.split('/');
+        endpoint = parts[parts.length - 1];
+      }
+    } catch (e) {
+      console.error('URL parsing failed in admin handler', e);
+    }
+  }
   const supabase = getSupabase();
 
   try {

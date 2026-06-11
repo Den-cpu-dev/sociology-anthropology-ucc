@@ -100,7 +100,19 @@ async function handleMe(req, res) {
 }
 
 export default async function handler(req, res) {
-  const endpoint = req.query?.endpoint;
+  let endpoint = req.query?.endpoint;
+  if (!endpoint && req.url) {
+    try {
+      const urlObj = new URL(req.url, 'http://localhost');
+      endpoint = urlObj.searchParams.get('endpoint');
+      if (!endpoint) {
+        const parts = urlObj.pathname.split('/');
+        endpoint = parts[parts.length - 1];
+      }
+    } catch (e) {
+      console.error('URL parsing failed in auth handler', e);
+    }
+  }
 
   try {
     if (endpoint === 'login') {
