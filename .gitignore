@@ -11,3 +11,4 @@ data/*.pdf
 scratch_l100/
 scratch_l200/
 scratch_l*/
+setup_db.js

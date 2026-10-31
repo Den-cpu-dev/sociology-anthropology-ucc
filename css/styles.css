@@ -542,13 +542,41 @@ tr.course-item:active{transform:none}
 .social-link:hover{color:var(--primary);border-color:var(--primary);background:rgba(61,90,30,.05);transform:translateY(-1px)}
 .social-link svg{flex-shrink:0}
 
-/* ===================== EXEC CARD ADDITIONS ===================== */
-.exec-card{background:var(--card);border:1px solid var(--border);border-radius:calc(var(--radius) * 1.5);overflow:hidden;transition:box-shadow .3s ease,transform .3s cubic-bezier(.22,1,.36,1)}
+/* ===================== EXEC CARD & GRID LAYOUT ===================== */
+.exec-lead-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:540px;margin:0 auto 2rem}
+.exec-grid-sub{display:grid;gap:1.5rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:1024px){.exec-grid-sub{grid-template-columns:repeat(4,1fr)}}
+
+.exec-card{background:var(--card);border:1px solid var(--border);border-radius:calc(var(--radius) * 1.5);overflow:hidden;transition:box-shadow .3s ease,transform .3s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column}
 .exec-card:hover{box-shadow:0 12px 28px rgba(0,0,0,.1);transform:translateY(-4px)}
-.exec-role{font-size:.8rem;color:var(--primary);font-weight:600;margin-top:.15rem}
-a.exec-card-ec-portal{display:block;text-decoration:none;color:inherit;cursor:pointer}
+.exec-card-lead{border-color:rgba(61,90,30,.25);box-shadow:0 6px 18px rgba(61,90,30,.06)}
+.exec-card-lead:hover{box-shadow:0 14px 32px rgba(61,90,30,.15);border-color:var(--primary-light)}
+
+.exec-card .exec-img{aspect-ratio:3/4;background:var(--muted);overflow:hidden;position:relative}
+.exec-card .exec-img img{width:100%;height:100%;object-fit:cover;display:block}
+.exec-card .card-body{padding:.85rem .65rem;text-align:center;display:flex;flex-direction:column;justify-content:center;flex-grow:1}
+.exec-card .card-body h3{font-size:.98rem;font-weight:600;margin:0 0 .2rem;line-height:1.25;color:var(--fg)}
+.exec-role{font-size:.8rem;color:var(--primary);font-weight:600;margin:0;line-height:1.3}
+
+a.exec-card-ec-portal{display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer}
 a.exec-card-ec-portal:hover{box-shadow:0 12px 28px rgba(61,90,30,.15);border-color:var(--primary-light)}
 a.exec-card-ec-portal:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* Mobile optimization for SOASA executives */
+@media(max-width:639px){
+  .exec-lead-grid{gap:.75rem;margin-bottom:1.25rem}
+  .exec-grid-sub{gap:.75rem}
+  .exec-card{border-radius:var(--radius)}
+  .exec-card .card-body{padding:.65rem .4rem;min-height:3.6rem}
+  .exec-card .card-body h3{font-size:.85rem;margin-bottom:.15rem}
+  .exec-role{font-size:.72rem}
+}
+@media(max-width:360px){
+  .exec-lead-grid,.exec-grid-sub{gap:.5rem}
+  .exec-card .card-body{padding:.5rem .25rem}
+  .exec-card .card-body h3{font-size:.78rem}
+  .exec-role{font-size:.68rem}
+}
 
 /* ===================== SCHOLARSHIP ADDITIONS ===================== */
 .scholarship-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem}

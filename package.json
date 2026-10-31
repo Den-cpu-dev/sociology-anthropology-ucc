@@ -10,7 +10,8 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
     "bcryptjs": "^2.4.3",
-    "jose": "^5.9.6"
+    "jose": "^5.9.6",
+    "pg": "^8.21.0"
   },
   "devDependencies": {
     "vercel": "^41.0.0"

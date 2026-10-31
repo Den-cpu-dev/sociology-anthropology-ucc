@@ -75,7 +75,7 @@ Students see “Voting unavailable” outside the window.
 
 ## 6. Electoral Commissioner dashboard
 
-**From the website:** SOASA → Executives → click **Godwin J. Ankuvie** (Electoral Commissioner) photo.
+**From the website:** SOASA → Executives → click **George Amfoh** (Electoral Commissioner) photo.
 
 **Passwords (Vercel env vars):**
 - `EC_DASHBOARD_PASSWORD` — for the commissioner (photo portal)
